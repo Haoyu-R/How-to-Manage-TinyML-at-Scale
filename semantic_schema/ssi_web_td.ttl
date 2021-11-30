@@ -1,0 +1,95 @@
+# baseURI: http://ureasoner.org/tiny-demo/SSI_Web-322-000-000-001
+
+@prefix demo: <http://ureasoner.org/tinyml-demo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s3n: <http://w3id.org/s3n/> .
+@prefix schema: <https://schema.org/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+
+<http://ureasoner.org/tinyml-demo/SSI_Web-322-000-000-001>
+  rdf:type s3n:SmartSensor ;
+  ssn:hasSubSystem [
+      rdf:type demo:Thermometer ;
+    ] ;
+  ssn:hasSubSystem [
+      rdf:type demo:Accelerometer ;
+    ] ;
+  ssn:hasSubSystem [
+      rdf:type demo:Gyroscope ;
+	] ;
+  ssn:hasSubSystem [
+      rdf:type s3n:MicroController ;
+      s3n:hasSystemCapability [
+          ssn-system:hasSystemProperty [
+              rdf:type demo:Flash ;
+              schema:unitCode om:kilobyte ;
+              schema:value 512 ;
+			  rdfs:comment "Flash."@en ;
+            ] ;
+		  ssn-system:hasSystemProperty [
+		      rdf:type demo:RAM ;
+		      schema:unitCode om:kilobyte ;
+		      schema:value 128 ;
+			  rdfs:comment "RAM."@en ;
+		    ] ;
+        ] ;
+      rdfs:comment "SIEMENS SSI-Web Node MicroController."@en ;
+    ] ;
+  td:description "SIEMENS SSI-Web Node"@en ;
+  td:hasPropertyAffordance [
+      td:description "Temperature data."@en ;
+      td:hasForm [
+          td:href "http://ureasoner.org/tinyml-demo/SSI_Web-322-000-000-001/temperature"@en ;
+          td:op "observeproperty"@en ;
+          td:op "readproperty"@en ;
+        ] ;
+      td:isObservable "true"^^xsd:boolean ;
+      td:maximum 80 ;
+      td:minimum -20 ;
+      td:readOnly "true"^^xsd:boolean ;
+      td:title "Temperature"@en ;
+      td:type "number"@en ;
+      td:unit "om:degree_Celsius"@en ;
+    ] ;
+  td:hasPropertyAffordance [
+      td:description "Acceleration data."@en ;
+      td:hasForm [
+          td:href "http://ureasoner.org/tinyml-demo/SSI_Web-322-000-000-001/acceleration"@en ;
+          td:op "observeproperty"@en ;
+          td:op "readproperty"@en ;
+        ] ;
+      td:isObservable "true"^^xsd:boolean ;
+      td:maximum 4 ;
+      td:minimum -4 ;
+      td:readOnly "true"^^xsd:boolean ;
+      td:title "Acceleration"@en ;
+      td:type "number"@en ;
+      td:unit "om:gravity"@en ;
+    ] ;
+  td:hasPropertyAffordance [
+	  td:description "Orientation data."@en ;
+	  td:hasForm [
+		  td:href "http://ureasoner.org/tinyml-demo/SSI_Web-322-000-000-001/orientation"@en ;
+		  td:op "observeproperty"@en ;
+		  td:op "readproperty"@en ;
+		] ;
+	  td:isObservable "true"^^xsd:boolean ;
+	  td:maximum 2000 ;
+      td:minimum -2000 ;
+	  td:readOnly "true"^^xsd:boolean ;
+	  td:title "Orientation"@en ;
+	  td:type "number"@en ;
+	  td:unit "om:degress_per_second"@en ;
+	] ;
+  td:hasSecurityConfiguration td:nosec_sc ;
+  td:securityDefinitions [
+      td:scheme "nosec"@en ;
+    ] ;
+  td:title "SSI-Web_1"@en ;
+.

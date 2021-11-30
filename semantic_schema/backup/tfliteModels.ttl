@@ -1,0 +1,2463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:nnet="http://ureasoner.org/networkschema#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:s3n="http://w3id.org/s3n/"
+   xmlns:schema="https://schema.org/"
+   xmlns:ssn="http://www.w3.org/ns/ssn/"
+   xmlns:ssn-system="http://www.w3.org/ns/ssn/systems/"
+>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <nnet:reference rdf:resource="https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/micro_speech"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">336000.0</nnet:hasMultiplyAccumulateOps>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <nnet:hasID>d67a4aee-0e1b-42f1-9185-9d668a053204</nnet:hasID>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <nnet:dataset rdf:resource="http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <nnet:hasDescription>a NN for speech commands recognition yes/no</nnet:hasDescription>
+    <nnet:hasTitle>Micro_Speech_Yes_No_1</nnet:hasTitle>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <nnet:creator>Google</nnet:creator>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_9_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <nnet:hasID>ab846f6d-f251-43b0-b7f1-059ed938737c</nnet:hasID>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_2_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3780.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <nnet:dataset rdf:resource="https://experiments.withgoogle.com/tiny-motion-trainer/view/"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <nnet:creator>Eunji Lee et al.</nnet:creator>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <nnet:hasTitle>Move</nnet:hasTitle>
+    <nnet:reference rdf:resource="https://github.com/Yeonhee77/MOVE"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_4_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:hasDescription>a NN for recognizing gestures by using 6d accelerometer and gyroscope data. </nnet:hasDescription>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">22.712</schema:minValue>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Flash requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_4_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_7_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.968</schema:minValue>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#float32"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_28_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_9_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_18_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <nnet:hasID>49300fd8-70c5-410b-af44-43c8ccfa8c44</nnet:hasID>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:hasTitle>Micro_Speech_Yes_No_4</nnet:hasTitle>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">381824.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:dataset rdf:resource="http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <nnet:hasDescription>a NN for speech commands recognition yes/no</nnet:hasDescription>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <nnet:creator>Haoyu</nnet:creator>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <nnet:reference rdf:resource="https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/micro_speech"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_12_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_25_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:dataset rdf:resource="https://arxiv.org/abs/1906.05721"/>
+    <nnet:hasTitle>Person_Detection_1</nnet:hasTitle>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7158144.0</nnet:hasMultiplyAccumulateOps>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_4_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_8_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_10_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_26_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_7_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_18_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_11_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:hasDescription>a NN for detecting if a person is in the image</nnet:hasDescription>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_17_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_27_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:hasID>31138318-ec86-4cf4-8411-1a5b379bfed3</nnet:hasID>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_6_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:reference rdf:resource="https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/person_detection"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_24_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_9_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_15_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_20_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_21_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_22_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_5_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_16_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_23_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_19_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_13_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:creator>Google</nnet:creator>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_14_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <nnet:dataset rdf:resource="http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <nnet:hasID>02cc9f52-c17a-4c78-b32f-8b1f0569c4e3</nnet:hasID>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <nnet:creator>Haoyu</nnet:creator>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <nnet:hasDescription>a NN for speech commands recognition backward/forward</nnet:hasDescription>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">336000.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:hasTitle>Micro_Speech_Forward_Backward</nnet:hasTitle>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <nnet:reference rdf:resource="N.A."/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:hasDescription>a NN for detecting if someone is snoring using microphone data</nnet:hasDescription>
+    <nnet:reference rdf:resource="https://www.hackster.io/naveenbskumar/snoring-guardian-dccc34"/>
+    <nnet:creator>Naveen Kumar </nnet:creator>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_7_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <nnet:hasID>cefdfa3b-d5ab-4b6a-9e54-ed372249381f</nnet:hasID>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_8_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2119808.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_5_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_6_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <nnet:dataset rdf:resource="https://research.google.com/audioset/"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <nnet:hasTitle>Snoring_Guardian</nnet:hasTitle>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_4_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_23_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/a5205502-a28e-4a25-8635-378e07c60c7d">
+    <nnet:dataset rdf:resource="http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz"/>
+    <nnet:hasTitle>Micro_Speech_Yes_No_3</nnet:hasTitle>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:hasDescription>a NN for speech commands recognition yes/no</nnet:hasDescription>
+    <nnet:reference rdf:resource="https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/micro_speech"/>
+    <nnet:creator>Haoyu</nnet:creator>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <nnet:hasID>a5205502-a28e-4a25-8635-378e07c60c7d</nnet:hasID>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">336000.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_2_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <nnet:hasDescription>a NN for recognizing gestures by using 6d accelerometer and gyroscope data. </nnet:hasDescription>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <nnet:creator>Haoyu</nnet:creator>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15780.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <nnet:reference rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_4_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <nnet:dataset rdf:resource="https://experiments.withgoogle.com/tiny-motion-trainer/view/"/>
+    <nnet:hasID>57896f06-123a-445f-b34d-7ed63f1b88ab</nnet:hasID>
+    <nnet:hasTitle>Motion_Trainer_Left_Right</nnet:hasTitle>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#float32"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_49300fd8-70c5-410b-af44-43c8ccfa8c44"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <nnet:hasOutputInfo>0: silence, 1: unknown, 2: yes , 3: no</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_13_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <nnet:shapeIn>[ 1 60]</nnet:shapeIn>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#float32"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#other_metric"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <nnet:hasTitle>Micro_Speech_Yes_No_2</nnet:hasTitle>
+    <nnet:dataset rdf:resource="http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:reference rdf:resource="https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/micro_speech"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <nnet:hasDescription>a NN for speech commands recognition yes/no</nnet:hasDescription>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">381824.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <nnet:hasID>0cf68d8c-a396-4cb4-a936-11cf9b133ab5</nnet:hasID>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:creator>Haoyu</nnet:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_8_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>a flattened sliding window of length 50 on 6d accelerometer and gyroscope data scaled to [-1, 1]</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Microphone"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <nnet:hasHardwareInfo>tested on MP34DT05</nnet:hasHardwareInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_17_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <nnet:creator>Google</nnet:creator>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <nnet:dataset rdf:resource="None"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <nnet:hasID>39f4d22a-51da-4002-af8a-33c3ae0be73c</nnet:hasID>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">288.0</nnet:hasMultiplyAccumulateOps>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:reference rdf:resource="https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/hello_world/train/README.md"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#OtherCategory"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <nnet:hasTitle>Hello_World</nnet:hasTitle>
+    <nnet:created>2021-11-27</nnet:created>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <nnet:hasDescription>a NN for calculating a sine wave.</nnet:hasDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_17_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_16_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:creator>Google</nnet:creator>
+    <nnet:hasID>a7dae750-208f-4577-9d40-25b02049832c</nnet:hasID>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_8_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_6_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_14_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_18_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_7_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:hasTitle>Visual_Alarm_Clock</nnet:hasTitle>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_27_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_12_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_28_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_26_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_23_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:reference rdf:resource="https://github.com/googlecreativelab/visual-alarm-clock"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_5_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_10_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_25_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_24_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_11_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_15_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_22_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_20_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_9_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_4_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_21_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_13_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:hasDescription>a NN for detecting if a person with a "morning mountain" pose is in the image</nnet:hasDescription>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7387976.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:dataset rdf:resource="https://arxiv.org/abs/1906.05721"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_19_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_22_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+    <nnet:hasOutputInfo>0: right, 1: left</nnet:hasOutputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_2_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <nnet:hasDescription>a NN for recognizing gestures by using 6d accelerometer and gyroscope data. </nnet:hasDescription>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3780.0</nnet:hasMultiplyAccumulateOps>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <nnet:creator>Manas Pange</nnet:creator>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <nnet:dataset rdf:resource="https://experiments.withgoogle.com/tiny-motion-trainer/view/"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:hasTitle>Squats_Counter</nnet:hasTitle>
+    <nnet:reference rdf:resource="https://github.com/Manasmw01/Squats-Counter"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <nnet:hasID>8c93e77f-82e0-468a-a75f-7bc9200c7678</nnet:hasID>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_5_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#float32"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <nnet:dataset rdf:resource="http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:hasTitle>Micro_Speech_Up_Down_Go</nnet:hasTitle>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">340000.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <nnet:hasID>460bdd0f-d3f0-4268-9da0-067f3f892ce2</nnet:hasID>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <nnet:hasDescription>a NN for speech commands recognition up/down/go</nnet:hasDescription>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <nnet:creator>Harvard_TinyMLx</nnet:creator>
+    <nnet:reference rdf:resource="https://colab.research.google.com/github/tinyMLx/colabs/blob/master/4-5-18-KWS-FavoriteKeywords.ipynb#scrollTo=h1Qkm4riNP93"/>
+    <nnet:created>2021-11-27</nnet:created>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_ab846f6d-f251-43b0-b7f1-059ed938737c"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</nnet:hasIndex>
+    <nnet:shapeOut>[1 4]</nnet:shapeOut>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/0762dcc2-483c-41be-805f-d0e555f981a3">
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <nnet:creator>Haoyu</nnet:creator>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1008.0</nnet:hasMultiplyAccumulateOps>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Unsupervised"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:hasID>0762dcc2-483c-41be-805f-d0e555f981a3</nnet:hasID>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <nnet:reference rdf:resource="https://keras.io/examples/timeseries/timeseries_anomaly_detection"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <nnet:hasTitle>Anomaly_Detection_Autoencoder</nnet:hasTitle>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <nnet:hasDescription>a NN for anomaly detection by using autoencoder on 3d accelerometer data</nnet:hasDescription>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <nnet:dataset rdf:resource="None"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_26_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_12_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_20_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</nnet:hasIndex>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.48</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Ram requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <nnet:hasID>4afcb467-4261-4603-b2aa-5abbc79b03b2</nnet:hasID>
+    <nnet:dataset rdf:resource="None"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:hasDescription>a NN for recognizing gestures by using 6d accelerometer and gyroscope data. </nnet:hasDescription>
+    <nnet:creator>Eduardo Padrón</nnet:creator>
+    <nnet:hasTitle>Mapping_Dance</nnet:hasTitle>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_2_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <nnet:reference rdf:resource="https://github.com/fullmakeralchemist/tinyml-mapping-backlight"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">36495.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.8</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_27_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:shapeOut>[1 2]</nnet:shapeOut>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_8_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:shapeOut>[ 1 10]</nnet:shapeOut>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <rdfs:label>procedureFeature_1</rdfs:label>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15780.0</nnet:hasMultiplyAccumulateOps>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:hasTitle>Motion_Trainer_Up_Forward</nnet:hasTitle>
+    <nnet:hasDescription>a NN for recognizing gestures by using 6d accelerometer and gyroscope data. </nnet:hasDescription>
+    <nnet:reference rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022"/>
+    <nnet:creator>Haoyu</nnet:creator>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_2_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:dataset rdf:resource="https://experiments.withgoogle.com/tiny-motion-trainer/view/"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <nnet:hasID>ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a</nnet:hasID>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_4_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:shapeIn>[   1 1960]</nnet:shapeIn>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g 119 Hz</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Accelerometer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">92.1</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_11_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26032.0</nnet:hasMultiplyAccumulateOps>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:reference rdf:resource="https://github.com/a-g-v/VoiceTurn"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_4_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:hasID>b283f08e-5665-4396-bc4e-38ac1f0abcfa</nnet:hasID>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_8_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_6_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_7_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_9_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:hasTitle>Voice_Turn</nnet:hasTitle>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_5_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:dataset rdf:resource="http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz"/>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <nnet:creator>Alvaro Gonzalez-Vila </nnet:creator>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:hasDescription>a NN for speech commands recognition left/right</nnet:hasDescription>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.8</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_4_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#maxPool2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</nnet:hasIndex>
+    <nnet:shapeOut>[1 2]</nnet:shapeOut>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#dequantize"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_7_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">31.256</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:shapeIn>[ 1 32 32  3]</nnet:shapeIn>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#maxPool2D"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.856</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Flash requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <nnet:shapeIn>[   1 1960]</nnet:shapeIn>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <nnet:shapeOut>[1 4]</nnet:shapeOut>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.816</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Ram requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:shapeIn>[1 1]</nnet:shapeIn>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_5_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_5_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g 119 Hz</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Accelerometer"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasOutputInfo>0: no_pose, 1: pose</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">236.072</schema:minValue>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Flash requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19.616</schema:minValue>
+    <rdfs:label>Flash requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <nnet:hasHardwareInfo>tested on MP34DT05</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Microphone"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_22_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.48</schema:minValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:shapeIn>[ 1 96 96  1]</nnet:shapeIn>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <nnet:shapeOut>[1 3]</nnet:shapeOut>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#mean"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <rdfs:label>procedureFeature_2</rdfs:label>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/78b9debf-3154-479c-b6df-bd283a4bf903">
+    <nnet:hasTitle>Magic_Wand_1</nnet:hasTitle>
+    <nnet:hasDescription>a NN for classifying four gestures by using 3d accelerometer data.</nnet:hasDescription>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:hasID>78b9debf-3154-479c-b6df-bd283a4bf903</nnet:hasID>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">62016.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_4_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:reference rdf:resource="https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/magic_wand/train/README.md"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:dataset rdf:resource="download.tensorflow.org/models/tflite/magic_wand/data.tar.gz"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_5_78b9debf-3154-479c-b6df-bd283a4bf903"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:creator>Google</nnet:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+    <nnet:shapeIn>[  1 128   3   1]</nnet:shapeIn>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#float32"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.864</schema:minValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <ssn:hasInput rdf:resource="http://example.org/neuralnetwork/input_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <nnet:outputLayer rdf:resource="http://example.org/neuralnetwork/outputLayer_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_2_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <nnet:inputLayer rdf:resource="http://example.org/neuralnetwork/inputLayer_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <ssn:hasOutput rdf:resource="http://example.org/neuralnetwork/output_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <nnet:hasMultiplyAccumulateOps rdf:datatype="http://www.w3.org/2001/XMLSchema#double">701056.0</nnet:hasMultiplyAccumulateOps>
+    <nnet:hasDescription>a NN which is introduced in the course "HarvardX TinyML3" for recognizing gestures of the digits 0-9 by using accelerometer and gyroscope data.</nnet:hasDescription>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_2_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_1_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <nnet:reference rdf:resource="https://www.edx.org/professional-certificate/harvardx-tiny-machine-learning"/>
+    <s3n:hasProcedureFeature rdf:resource="http://example.org/neuralnetwork/procedureFeature_1_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <nnet:creator>Harvard_TinyMLx</nnet:creator>
+    <nnet:hasID>4a29265c-e238-4fa0-9836-9ef2b62bcf1e</nnet:hasID>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_2_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NeuralNetwork"/>
+    <nnet:hasTitle>Magic_Wand_2</nnet:hasTitle>
+    <nnet:location rdf:resource="https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo"/>
+    <nnet:hasMetric rdf:resource="http://example.org/neuralnetwork/metric_1_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <nnet:hasHardwareReference rdf:resource="http://example.org/neuralnetwork/hardware_1_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_3_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <nnet:created>2021-11-27</nnet:created>
+    <nnet:dataset rdf:resource="https://tinyml.seas.harvard.edu/magic_wand/"/>
+    <nnet:hasCategory rdf:resource="http://ureasoner.org/networkschema#Classification"/>
+    <nnet:middleLayer rdf:resource="http://example.org/neuralnetwork/middleLayer_4_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:shapeIn>[   1 1960]</nnet:shapeIn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasInputInfo>a grey scale mage of size 96 x 96 scaled to [0, 1]</nnet:hasInputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:shapeIn>[   1 4160]</nnet:shapeIn>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">219.896</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <nnet:shapeOut>[1 2]</nnet:shapeOut>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_19_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.48</schema:minValue>
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_16_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_12_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_24_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:shapeOut>[1 4]</nnet:shapeOut>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+    <nnet:hasOutputInfo>reconstructed input</nnet:hasOutputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Accelerometer"/>
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Camera"/>
+    <nnet:hasHardwareInfo>tested on OV7675/0</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.08</schema:minValue>
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_23_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_6_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_10_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</nnet:hasIndex>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasHardwareInfo>tested on OV7675/0</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Camera"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:shapeIn>[ 1 59]</nnet:shapeIn>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:shapeIn>[  1 714]</nnet:shapeIn>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#float32"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_a7dae750-208f-4577-9d40-25b02049832c">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">116.48</schema:minValue>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <nnet:shapeOut>[1 4]</nnet:shapeOut>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_6_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_460bdd0f-d3f0-4268-9da0-067f3f892ce2"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:shapeIn>[   1 1960]</nnet:shapeIn>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <nnet:shapeOut>[1 2]</nnet:shapeOut>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#dequantize"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.48</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_15_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_19_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Accelerometer"/>
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:shapeOut>[1 2]</nnet:shapeOut>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_21_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#logistic"/>
+    <nnet:shapeOut>[ 1 59]</nnet:shapeOut>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_14_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>1d PCA of a sliding window of length 59 on 3d accelerometer data</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_20_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.2</nnet:hasMetricValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.864</schema:minValue>
+    <rdfs:label>Flash requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_4_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_9_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Accelerometer"/>
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_7_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#maxPool2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>a flattened sliding window of length 60 on 6d accelerometer and gyroscope data scaled to [-1, 1]</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:shapeIn>[   1 1960]</nnet:shapeIn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+    <nnet:hasOutputInfo>0: Left, 1: right, 2: noise, 3: other</nnet:hasOutputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_0762dcc2-483c-41be-805f-d0e555f981a3"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_4_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <nnet:hasInputInfo>a 2D RGB image (rasterized stroke) from 3D IMU data</nnet:hasInputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <nnet:hasHardwareInfo>tested on MP34DT05</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Microphone"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.288</schema:minValue>
+    <rdfs:label>Ram requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_2_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Gyroscope"/>
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_16_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_24_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+    <nnet:hasOutputInfo>0: wing, 1: ring, 2: slope, 3: unknown</nnet:hasOutputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_2_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Gyroscope"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_14_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_13_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">83.0</nnet:hasMetricValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.1</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.48</schema:minValue>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.048</schema:minValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:shapeIn>[ 1 96 96  1]</nnet:shapeIn>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:hasOutputInfo>0: no_snoring, 1: snoring</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.848</schema:minValue>
+    <rdfs:label>Ram requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <nnet:shapeOut>[1 2]</nnet:shapeOut>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#dequantize"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.048</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">17.048</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_4_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#maxPool2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_10_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:shapeIn>[   1 1960]</nnet:shapeIn>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>a flattened sliding window of length 50 on 6d accelerometer and gyroscope data scaled to [-1, 1]</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:shapeOut>[1 1 1 3]</nnet:shapeOut>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:hasInputInfo>a flattened spectrogram based on FFT result on sequenced 20 ms sliding windows of 1000 ms microphone data</nnet:hasInputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_4_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#float32"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_17_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</nnet:hasIndex>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">16.784</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:shapeIn>[ 1 60]</nnet:shapeIn>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#quantize"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+    <nnet:hasOutputInfo>0: silence, 1: unknown, 2: up , 3: Down, 4: go</nnet:hasOutputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_2_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Gyroscope"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_a5205502-a28e-4a25-8635-378e07c60c7d"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_5_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_25_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_27_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#avgPool2D"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <nnet:hasHardwareInfo>tested on MP34DT05</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Microphone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_4_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_39f4d22a-51da-4002-af8a-33c3ae0be73c"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.856</schema:minValue>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:shapeIn>[  1 650]</nnet:shapeIn>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <nnet:hasOutputInfo>0: silence, 1: unknown, 2: forward , 3: backward</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_25_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <nnet:shapeOut>[1 5]</nnet:shapeOut>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_21_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_31138318-ec86-4cf4-8411-1a5b379bfed3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_4_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:shapeOut>[1 1]</nnet:shapeOut>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <nnet:hasOutputInfo>0: up, 1: forward</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#maxPool2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.224</schema:minValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">94.128</schema:minValue>
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:shapeOut>[1 4]</nnet:shapeOut>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.472</schema:minValue>
+    <rdfs:label>Flash requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int32"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#resizeNearestNeighbor"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">93.2</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <nnet:hasInputInfo>a sliding window of length 128 on 3d accelerometer data</nnet:hasInputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.848</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Ram requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasOutputInfo>0: no_person, 1: persen</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_4_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_18_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_4afcb467-4261-4603-b2aa-5abbc79b03b2"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#quantize"/>
+    <nnet:shapeIn>[  1 300]</nnet:shapeIn>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_6_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <nnet:hasOutputInfo>0: silence, 1: unknown, 2: yes , 3: no</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#float32"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#float32"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_2_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Gyroscope"/>
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <rdfs:label>procedureFeature_2</rdfs:label>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_57896f06-123a-445f-b34d-7ed63f1b88ab"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_11_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.048</schema:minValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_26_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">94.6</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:hasHardwareInfo>tested on MP34DT05</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Microphone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Microphone"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <nnet:hasHardwareInfo>tested on MP34DT05</nnet:hasHardwareInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.936</schema:minValue>
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_b283f08e-5665-4396-bc4e-38ac1f0abcfa"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_2_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Gyroscope"/>
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Accelerometer"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_15_a7dae750-208f-4577-9d40-25b02049832c">
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.08</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_8_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_0762dcc2-483c-41be-805f-d0e555f981a3">
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.736</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_2_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Gyroscope"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">147.828</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_02cc9f52-c17a-4c78-b32f-8b1f0569c4e3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_57896f06-123a-445f-b34d-7ed63f1b88ab">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>a flattened MFCC feature based on FFT result on sequenced sliding windows of 1000 ms microphone data</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_a7dae750-208f-4577-9d40-25b02049832c">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">531.624</schema:minValue>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <rdfs:label>Flash requirement.</rdfs:label>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_a7dae750-208f-4577-9d40-25b02049832c">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_a7dae750-208f-4577-9d40-25b02049832c"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_3_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:shapeOut>[1 4]</nnet:shapeOut>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_1_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.712</schema:minValue>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+    <rdfs:label>Flash requirement.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_8_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#conv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <nnet:hasHardwareInfo>tested on MP34DT05</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Microphone"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_7_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu6"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</nnet:hasIndex>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_d67a4aee-0e1b-42f1-9185-9d668a053204">
+    <rdfs:label>procedureFeature_2</rdfs:label>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_d67a4aee-0e1b-42f1-9185-9d668a053204"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/inputLayer_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#quantize"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:shapeIn>[  1 300]</nnet:shapeIn>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+    <nnet:hasOutputInfo>0: straight, 1: squats</nnet:hasOutputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#uint8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_0cf68d8c-a396-4cb4-a936-11cf9b133ab5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <nnet:hasOutputInfo>sine value of the input</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_ee04d3be-5d63-4132-b6bd-bfeac3a6bb5a"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_5_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Accelerometer"/>
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/condition_2_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.08</schema:minValue>
+    <rdfs:label>Ram requirement.</rdfs:label>
+    <rdf:type rdf:resource="http://w3id.org/s3n/Memory"/>
+    <schema:unitCode>om.kilobyte</schema:unitCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_6_b283f08e-5665-4396-bc4e-38ac1f0abcfa">
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</nnet:hasIndex>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#reshape"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_1_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#int8"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</nnet:hasIndex>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#depthwiseConv2D"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:hasActivation rdf:resource="http://ureasoner.org/networkschema#relu"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_4a29265c-e238-4fa0-9836-9ef2b62bcf1e"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <nnet:hasInputInfo>a flattened sliding window of length 117 on 6d accelerometer and gyroscope data scaled to [0, 1]</nnet:hasInputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/outputLayer_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#softmax"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nnet:hasIndex>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:isTrainable rdf:resource="https://schema.org/false"/>
+    <nnet:shapeOut>[1 4]</nnet:shapeOut>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#OtherSensor"/>
+    <nnet:hasHardwareInfo>N.A.</nnet:hasHardwareInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_a5205502-a28e-4a25-8635-378e07c60c7d">
+    <nnet:hasHardwareInfo>tested on MP34DT05</nnet:hasHardwareInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Microphone"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_39f4d22a-51da-4002-af8a-33c3ae0be73c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>any real value</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_a7dae750-208f-4577-9d40-25b02049832c">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">82.3</nnet:hasMetricValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_ab846f6d-f251-43b0-b7f1-059ed938737c">
+    <nnet:hasOutputInfo>0: jump, 1: punch</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_31138318-ec86-4cf4-8411-1a5b379bfed3">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>a grey scale image of size 96 x 96 x 1 scaled to [0, 1]</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_1_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_1_8c93e77f-82e0-468a-a75f-7bc9200c7678"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_4afcb467-4261-4603-b2aa-5abbc79b03b2">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+    <nnet:hasOutputInfo>0: circle, 1: left, 2: front</nnet:hasOutputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_78b9debf-3154-479c-b6df-bd283a4bf903">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <nnet:hasInputInfo>a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data</nnet:hasInputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/middleLayer_2_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <nnet:isTrainable rdf:resource="https://schema.org/true"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Layer"/>
+    <nnet:hasIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</nnet:hasIndex>
+    <nnet:hasQuantization rdf:resource="http://ureasoner.org/networkschema#float32"/>
+    <nnet:hasType rdf:resource="http://ureasoner.org/networkschema#fullyConnected"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/metric_1_460bdd0f-d3f0-4268-9da0-067f3f892ce2">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Metric"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#top_1_accuracy"/>
+    <nnet:hasMetricValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</nnet:hasMetricValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_49300fd8-70c5-410b-af44-43c8ccfa8c44">
+    <nnet:hasOutputInfo>0: silence, 1: unknown, 2: yes , 3: no</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <nnet:hasInputInfo>a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data</nnet:hasInputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_0cf68d8c-a396-4cb4-a936-11cf9b133ab5">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+    <nnet:hasOutputInfo>0: silence, 1: unknown, 2: yes , 3: no</nnet:hasOutputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/procedureFeature_2_cefdfa3b-d5ab-4b6a-9e54-ed372249381f">
+    <ssn-system:inCondition rdf:resource="http://example.org/neuralnetwork/condition_2_cefdfa3b-d5ab-4b6a-9e54-ed372249381f"/>
+    <rdf:type rdf:resource="http://w3id.org/s3n/ProcedureFeature"/>
+    <rdfs:label>procedureFeature_2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/input_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkInput"/>
+    <nnet:hasInputInfo>a flattened sliding window of length 60 on 6d accelerometer and gyroscope data scaled to [-1, 1]</nnet:hasInputInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/hardware_1_8c93e77f-82e0-468a-a75f-7bc9200c7678">
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Hardware"/>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#Accelerometer"/>
+    <nnet:hasHardwareInfo>tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz</nnet:hasHardwareInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/neuralnetwork/output_4a29265c-e238-4fa0-9836-9ef2b62bcf1e">
+    <nnet:hasOutputInfo>gestures of the digits 0-9</nnet:hasOutputInfo>
+    <rdf:type rdf:resource="http://ureasoner.org/networkschema#NetworkOutput"/>
+  </rdf:Description>
+</rdf:RDF>

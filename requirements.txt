@@ -1,0 +1,7 @@
+hexdump==3.3
+rdflib==5.0.0
+SPARQLWrapper==1.8.5
+tflite==2.4.0
+tensorflow==2.5.0
+requests==2.23.0
+

@@ -1,0 +1,2168 @@
+@prefix demo: <http://ureasoner.org/tinyml-demo#> .
+@prefix nnet: <http://ureasoner.org/networkschema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s3n: <http://w3id.org/s3n/> .
+@prefix schema: <https://schema.org/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/neuralnetwork/01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-25" ;
+    nnet:creator "Haoyu" ;
+    nnet:dataset <http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for speech commands recognition yes/no" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> ;
+    nnet:hasID "01f6ad1c-b24a-4159-9f38-7a30ea8914ca" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> ;
+    nnet:hasMultiplyAccumulateOps 3.81824e+05 ;
+    nnet:hasTitle "Micro_Speech_Yes_No_2" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_01f6ad1c-b24a-4159-9f38-7a30ea8914ca>,
+        <http://example.org/neuralnetwork/middleLayer_2_01f6ad1c-b24a-4159-9f38-7a30ea8914ca>,
+        <http://example.org/neuralnetwork/middleLayer_3_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> ;
+    nnet:reference <https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/micro_speech> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_01f6ad1c-b24a-4159-9f38-7a30ea8914ca>,
+        <http://example.org/neuralnetwork/procedureFeature_2_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> .
+
+<http://example.org/neuralnetwork/022aa512-a8d8-43b0-8ebc-91d179215eeb> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-22" ;
+    nnet:creator "Eduardo Padrón" ;
+    nnet:dataset <None> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for recognizing gestures by using 6d accelerometer and gyroscope data. " ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_022aa512-a8d8-43b0-8ebc-91d179215eeb>,
+        <http://example.org/neuralnetwork/hardware_2_022aa512-a8d8-43b0-8ebc-91d179215eeb> ;
+    nnet:hasID "022aa512-a8d8-43b0-8ebc-91d179215eeb" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_022aa512-a8d8-43b0-8ebc-91d179215eeb> ;
+    nnet:hasMultiplyAccumulateOps 3.6495e+04 ;
+    nnet:hasTitle "Mapping_Dance" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_022aa512-a8d8-43b0-8ebc-91d179215eeb> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_022aa512-a8d8-43b0-8ebc-91d179215eeb>,
+        <http://example.org/neuralnetwork/middleLayer_2_022aa512-a8d8-43b0-8ebc-91d179215eeb> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_022aa512-a8d8-43b0-8ebc-91d179215eeb> ;
+    nnet:reference <https://github.com/fullmakeralchemist/tinyml-mapping-backlight> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_022aa512-a8d8-43b0-8ebc-91d179215eeb>,
+        <http://example.org/neuralnetwork/procedureFeature_2_022aa512-a8d8-43b0-8ebc-91d179215eeb> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_022aa512-a8d8-43b0-8ebc-91d179215eeb> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_022aa512-a8d8-43b0-8ebc-91d179215eeb> .
+
+<http://example.org/neuralnetwork/067af001-0d3f-4b64-9991-b37296c966f3> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-22" ;
+    nnet:creator "Harvard_TinyMLx" ;
+    nnet:dataset <http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for speech commands recognition up/down/go" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_067af001-0d3f-4b64-9991-b37296c966f3> ;
+    nnet:hasID "067af001-0d3f-4b64-9991-b37296c966f3" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_067af001-0d3f-4b64-9991-b37296c966f3> ;
+    nnet:hasMultiplyAccumulateOps 3.4e+05 ;
+    nnet:hasTitle "Micro_Speech_Up_Down_Go" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_067af001-0d3f-4b64-9991-b37296c966f3> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_067af001-0d3f-4b64-9991-b37296c966f3>,
+        <http://example.org/neuralnetwork/middleLayer_2_067af001-0d3f-4b64-9991-b37296c966f3> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_067af001-0d3f-4b64-9991-b37296c966f3> ;
+    nnet:reference <https://colab.research.google.com/github/tinyMLx/colabs/blob/master/4-5-18-KWS-FavoriteKeywords.ipynb#scrollTo=h1Qkm4riNP93> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_067af001-0d3f-4b64-9991-b37296c966f3>,
+        <http://example.org/neuralnetwork/procedureFeature_2_067af001-0d3f-4b64-9991-b37296c966f3> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_067af001-0d3f-4b64-9991-b37296c966f3> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_067af001-0d3f-4b64-9991-b37296c966f3> .
+
+<http://example.org/neuralnetwork/10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-26" ;
+    nnet:creator "Google" ;
+    nnet:dataset <https://arxiv.org/abs/1906.05721> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for detecting if a person is in the image" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_10bb3204-67bb-4b5f-9874-0ec8e73e2721> ;
+    nnet:hasID "10bb3204-67bb-4b5f-9874-0ec8e73e2721" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_10bb3204-67bb-4b5f-9874-0ec8e73e2721> ;
+    nnet:hasMultiplyAccumulateOps 7.158144e+06 ;
+    nnet:hasTitle "Person_Detection_1" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_10bb3204-67bb-4b5f-9874-0ec8e73e2721> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_10_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_11_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_12_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_13_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_14_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_15_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_16_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_17_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_18_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_19_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_1_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_20_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_21_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_22_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_23_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_24_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_25_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_26_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_27_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_2_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_3_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_4_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_5_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_6_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_7_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_8_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/middleLayer_9_10bb3204-67bb-4b5f-9874-0ec8e73e2721> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_10bb3204-67bb-4b5f-9874-0ec8e73e2721> ;
+    nnet:reference <https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/person_detection> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_10bb3204-67bb-4b5f-9874-0ec8e73e2721>,
+        <http://example.org/neuralnetwork/procedureFeature_2_10bb3204-67bb-4b5f-9874-0ec8e73e2721> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_10bb3204-67bb-4b5f-9874-0ec8e73e2721> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_10bb3204-67bb-4b5f-9874-0ec8e73e2721> .
+
+<http://example.org/neuralnetwork/15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-22" ;
+    nnet:creator "Eunji Lee et al." ;
+    nnet:dataset <https://experiments.withgoogle.com/tiny-motion-trainer/view/> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for recognizing gestures by using 6d accelerometer and gyroscope data. " ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_15567ceb-9827-4431-8fde-bdd67bd02986>,
+        <http://example.org/neuralnetwork/hardware_2_15567ceb-9827-4431-8fde-bdd67bd02986> ;
+    nnet:hasID "15567ceb-9827-4431-8fde-bdd67bd02986" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_15567ceb-9827-4431-8fde-bdd67bd02986> ;
+    nnet:hasMultiplyAccumulateOps 3.78e+03 ;
+    nnet:hasTitle "Move" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_15567ceb-9827-4431-8fde-bdd67bd02986> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_15567ceb-9827-4431-8fde-bdd67bd02986>,
+        <http://example.org/neuralnetwork/middleLayer_2_15567ceb-9827-4431-8fde-bdd67bd02986>,
+        <http://example.org/neuralnetwork/middleLayer_3_15567ceb-9827-4431-8fde-bdd67bd02986>,
+        <http://example.org/neuralnetwork/middleLayer_4_15567ceb-9827-4431-8fde-bdd67bd02986> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_15567ceb-9827-4431-8fde-bdd67bd02986> ;
+    nnet:reference <https://github.com/Yeonhee77/MOVE> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_15567ceb-9827-4431-8fde-bdd67bd02986>,
+        <http://example.org/neuralnetwork/procedureFeature_2_15567ceb-9827-4431-8fde-bdd67bd02986> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_15567ceb-9827-4431-8fde-bdd67bd02986> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_15567ceb-9827-4431-8fde-bdd67bd02986> .
+
+<http://example.org/neuralnetwork/188e9833-ebee-4024-ac51-6271b931da90> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-22" ;
+    nnet:creator "Google" ;
+    nnet:dataset <download.tensorflow.org/models/tflite/magic_wand/data.tar.gz> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for classifying four gestures by using 3d accelerometer data." ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_188e9833-ebee-4024-ac51-6271b931da90> ;
+    nnet:hasID "188e9833-ebee-4024-ac51-6271b931da90" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_188e9833-ebee-4024-ac51-6271b931da90> ;
+    nnet:hasMultiplyAccumulateOps 6.2016e+04 ;
+    nnet:hasTitle "Magic_Wand_1" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_188e9833-ebee-4024-ac51-6271b931da90> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_188e9833-ebee-4024-ac51-6271b931da90>,
+        <http://example.org/neuralnetwork/middleLayer_2_188e9833-ebee-4024-ac51-6271b931da90>,
+        <http://example.org/neuralnetwork/middleLayer_3_188e9833-ebee-4024-ac51-6271b931da90>,
+        <http://example.org/neuralnetwork/middleLayer_4_188e9833-ebee-4024-ac51-6271b931da90>,
+        <http://example.org/neuralnetwork/middleLayer_5_188e9833-ebee-4024-ac51-6271b931da90> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_188e9833-ebee-4024-ac51-6271b931da90> ;
+    nnet:reference <https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/magic_wand/train/README.md> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_188e9833-ebee-4024-ac51-6271b931da90>,
+        <http://example.org/neuralnetwork/procedureFeature_2_188e9833-ebee-4024-ac51-6271b931da90> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_188e9833-ebee-4024-ac51-6271b931da90> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_188e9833-ebee-4024-ac51-6271b931da90> .
+
+<http://example.org/neuralnetwork/2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-25" ;
+    nnet:creator "Haoyu" ;
+    nnet:dataset <https://experiments.withgoogle.com/tiny-motion-trainer/view/> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for recognizing gestures by using 6d accelerometer and gyroscope data. " ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_2be6232b-7575-4457-8546-eebb6bc0622e>,
+        <http://example.org/neuralnetwork/hardware_2_2be6232b-7575-4457-8546-eebb6bc0622e> ;
+    nnet:hasID "2be6232b-7575-4457-8546-eebb6bc0622e" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_2be6232b-7575-4457-8546-eebb6bc0622e> ;
+    nnet:hasMultiplyAccumulateOps 1.578e+04 ;
+    nnet:hasTitle "Motion_Trainer_Up_Forward" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_2be6232b-7575-4457-8546-eebb6bc0622e> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_2be6232b-7575-4457-8546-eebb6bc0622e>,
+        <http://example.org/neuralnetwork/middleLayer_2_2be6232b-7575-4457-8546-eebb6bc0622e>,
+        <http://example.org/neuralnetwork/middleLayer_3_2be6232b-7575-4457-8546-eebb6bc0622e>,
+        <http://example.org/neuralnetwork/middleLayer_4_2be6232b-7575-4457-8546-eebb6bc0622e> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_2be6232b-7575-4457-8546-eebb6bc0622e> ;
+    nnet:reference <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_2be6232b-7575-4457-8546-eebb6bc0622e>,
+        <http://example.org/neuralnetwork/procedureFeature_2_2be6232b-7575-4457-8546-eebb6bc0622e> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_2be6232b-7575-4457-8546-eebb6bc0622e> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_2be6232b-7575-4457-8546-eebb6bc0622e> .
+
+<http://example.org/neuralnetwork/368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-25" ;
+    nnet:creator "Haoyu" ;
+    nnet:dataset <http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for speech commands recognition yes/no" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> ;
+    nnet:hasID "368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> ;
+    nnet:hasMultiplyAccumulateOps 3.81824e+05 ;
+    nnet:hasTitle "Micro_Speech_Yes_No_4" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad>,
+        <http://example.org/neuralnetwork/middleLayer_2_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad>,
+        <http://example.org/neuralnetwork/middleLayer_3_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> ;
+    nnet:reference <https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/micro_speech> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad>,
+        <http://example.org/neuralnetwork/procedureFeature_2_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> .
+
+<http://example.org/neuralnetwork/50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-22" ;
+    nnet:creator "Manas Pange" ;
+    nnet:dataset <https://experiments.withgoogle.com/tiny-motion-trainer/view/> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for recognizing gestures by using 6d accelerometer and gyroscope data. " ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_50d41e3f-128c-4a43-b9ad-75d3d95a16ea>,
+        <http://example.org/neuralnetwork/hardware_2_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> ;
+    nnet:hasID "50d41e3f-128c-4a43-b9ad-75d3d95a16ea" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> ;
+    nnet:hasMultiplyAccumulateOps 3.78e+03 ;
+    nnet:hasTitle "Squats_Counter" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_50d41e3f-128c-4a43-b9ad-75d3d95a16ea>,
+        <http://example.org/neuralnetwork/middleLayer_2_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> ;
+    nnet:reference <https://github.com/Manasmw01/Squats-Counter> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_50d41e3f-128c-4a43-b9ad-75d3d95a16ea>,
+        <http://example.org/neuralnetwork/procedureFeature_2_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> .
+
+<http://example.org/neuralnetwork/64a5598b-f9f5-4224-88ed-723bd955ee2d> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-18" ;
+    nnet:creator "Haoyu" ;
+    nnet:dataset <http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for speech commands recognition backward/forward" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_64a5598b-f9f5-4224-88ed-723bd955ee2d> ;
+    nnet:hasID "64a5598b-f9f5-4224-88ed-723bd955ee2d" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_64a5598b-f9f5-4224-88ed-723bd955ee2d> ;
+    nnet:hasMultiplyAccumulateOps 3.36e+05 ;
+    nnet:hasTitle "Micro_Speech_Forward_Backward" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_64a5598b-f9f5-4224-88ed-723bd955ee2d> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_64a5598b-f9f5-4224-88ed-723bd955ee2d>,
+        <http://example.org/neuralnetwork/middleLayer_2_64a5598b-f9f5-4224-88ed-723bd955ee2d>,
+        <http://example.org/neuralnetwork/middleLayer_3_64a5598b-f9f5-4224-88ed-723bd955ee2d> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_64a5598b-f9f5-4224-88ed-723bd955ee2d> ;
+    nnet:reference <N.A.> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_64a5598b-f9f5-4224-88ed-723bd955ee2d>,
+        <http://example.org/neuralnetwork/procedureFeature_2_64a5598b-f9f5-4224-88ed-723bd955ee2d> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_64a5598b-f9f5-4224-88ed-723bd955ee2d> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_64a5598b-f9f5-4224-88ed-723bd955ee2d> .
+
+<http://example.org/neuralnetwork/7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-08" ;
+    nnet:creator "Google" ;
+    nnet:dataset <None> ;
+    nnet:hasCategory nnet:OtherCategory ;
+    nnet:hasDescription "a NN for calculating a sine wave." ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> ;
+    nnet:hasID "7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> ;
+    nnet:hasMultiplyAccumulateOps 2.88e+02 ;
+    nnet:hasTitle "Hello_World" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> ;
+    nnet:reference <https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/hello_world/train/README.md> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417>,
+        <http://example.org/neuralnetwork/procedureFeature_2_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> .
+
+<http://example.org/neuralnetwork/b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-25" ;
+    nnet:creator "Haoyu" ;
+    nnet:dataset <https://experiments.withgoogle.com/tiny-motion-trainer/view/> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for recognizing gestures by using 6d accelerometer and gyroscope data. " ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c>,
+        <http://example.org/neuralnetwork/hardware_2_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> ;
+    nnet:hasID "b035ae0f-4965-4e2a-85f0-9eaba2d0f33c" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> ;
+    nnet:hasMultiplyAccumulateOps 1.578e+04 ;
+    nnet:hasTitle "Motion_Trainer_Left_Right" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c>,
+        <http://example.org/neuralnetwork/middleLayer_2_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c>,
+        <http://example.org/neuralnetwork/middleLayer_3_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c>,
+        <http://example.org/neuralnetwork/middleLayer_4_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> ;
+    nnet:reference <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c>,
+        <http://example.org/neuralnetwork/procedureFeature_2_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> .
+
+<http://example.org/neuralnetwork/ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-18" ;
+    nnet:creator "Google" ;
+    nnet:dataset <http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for speech commands recognition yes/no" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> ;
+    nnet:hasID "ba00a1b0-0604-43f2-ab8b-bb43d34e29d8" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> ;
+    nnet:hasMultiplyAccumulateOps 3.36e+05 ;
+    nnet:hasTitle "Micro_Speech_Yes_No_1" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8>,
+        <http://example.org/neuralnetwork/middleLayer_2_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> ;
+    nnet:reference <https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/micro_speech> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8>,
+        <http://example.org/neuralnetwork/procedureFeature_2_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> .
+
+<http://example.org/neuralnetwork/c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-25" ;
+    nnet:creator "Harvard_TinyMLx" ;
+    nnet:dataset <https://tinyml.seas.harvard.edu/magic_wand/> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN which is introduced in the course \"HarvardX TinyML3\" for recognizing gestures of the digits 0-9 by using accelerometer and gyroscope data." ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb>,
+        <http://example.org/neuralnetwork/hardware_2_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> ;
+    nnet:hasID "c8caaf57-a4f5-41a3-b239-f7c82a0d77eb" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> ;
+    nnet:hasMultiplyAccumulateOps 7.01056e+05 ;
+    nnet:hasTitle "Magic_Wand_2" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb>,
+        <http://example.org/neuralnetwork/middleLayer_2_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb>,
+        <http://example.org/neuralnetwork/middleLayer_3_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb>,
+        <http://example.org/neuralnetwork/middleLayer_4_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> ;
+    nnet:reference <https://www.edx.org/professional-certificate/harvardx-tiny-machine-learning> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb>,
+        <http://example.org/neuralnetwork/procedureFeature_2_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> .
+
+<http://example.org/neuralnetwork/d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-22" ;
+    nnet:creator "Naveen Kumar " ;
+    nnet:dataset <https://research.google.com/audioset/> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for detecting if someone is snoring using microphone data" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> ;
+    nnet:hasID "d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> ;
+    nnet:hasMultiplyAccumulateOps 2.119808e+06 ;
+    nnet:hasTitle "Snoring_Guardian" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd>,
+        <http://example.org/neuralnetwork/middleLayer_2_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd>,
+        <http://example.org/neuralnetwork/middleLayer_3_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd>,
+        <http://example.org/neuralnetwork/middleLayer_4_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd>,
+        <http://example.org/neuralnetwork/middleLayer_5_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd>,
+        <http://example.org/neuralnetwork/middleLayer_6_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd>,
+        <http://example.org/neuralnetwork/middleLayer_7_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd>,
+        <http://example.org/neuralnetwork/middleLayer_8_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> ;
+    nnet:reference <https://www.hackster.io/naveenbskumar/snoring-guardian-dccc34> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd>,
+        <http://example.org/neuralnetwork/procedureFeature_2_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> .
+
+<http://example.org/neuralnetwork/dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a nnet:NeuralNetwork ;
+    nnet:created "2021-01-10" ;
+    nnet:creator "Haoyu" ;
+    nnet:dataset <None> ;
+    nnet:hasCategory nnet:Unsupervised ;
+    nnet:hasDescription "a NN for anomaly detection by using autoencoder on 3d accelerometer data" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> ;
+    nnet:hasID "dc1215f2-a28f-4376-80ad-47bd21f6a2bd" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> ;
+    nnet:hasMultiplyAccumulateOps 1.008e+03 ;
+    nnet:hasTitle "Anomaly_Detection_Autoencoder" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_dc1215f2-a28f-4376-80ad-47bd21f6a2bd>,
+        <http://example.org/neuralnetwork/middleLayer_2_dc1215f2-a28f-4376-80ad-47bd21f6a2bd>,
+        <http://example.org/neuralnetwork/middleLayer_3_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> ;
+    nnet:reference <https://keras.io/examples/timeseries/timeseries_anomaly_detection> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_dc1215f2-a28f-4376-80ad-47bd21f6a2bd>,
+        <http://example.org/neuralnetwork/procedureFeature_2_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> .
+
+<http://example.org/neuralnetwork/e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-22" ;
+    nnet:creator "Alvaro Gonzalez-Vila " ;
+    nnet:dataset <http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for speech commands recognition left/right" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_e0a4c429-1095-4833-a6cd-07d385ff61d5> ;
+    nnet:hasID "e0a4c429-1095-4833-a6cd-07d385ff61d5" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_e0a4c429-1095-4833-a6cd-07d385ff61d5> ;
+    nnet:hasMultiplyAccumulateOps 2.6032e+04 ;
+    nnet:hasTitle "Voice_Turn" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_e0a4c429-1095-4833-a6cd-07d385ff61d5> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_e0a4c429-1095-4833-a6cd-07d385ff61d5>,
+        <http://example.org/neuralnetwork/middleLayer_2_e0a4c429-1095-4833-a6cd-07d385ff61d5>,
+        <http://example.org/neuralnetwork/middleLayer_3_e0a4c429-1095-4833-a6cd-07d385ff61d5>,
+        <http://example.org/neuralnetwork/middleLayer_4_e0a4c429-1095-4833-a6cd-07d385ff61d5>,
+        <http://example.org/neuralnetwork/middleLayer_5_e0a4c429-1095-4833-a6cd-07d385ff61d5>,
+        <http://example.org/neuralnetwork/middleLayer_6_e0a4c429-1095-4833-a6cd-07d385ff61d5>,
+        <http://example.org/neuralnetwork/middleLayer_7_e0a4c429-1095-4833-a6cd-07d385ff61d5>,
+        <http://example.org/neuralnetwork/middleLayer_8_e0a4c429-1095-4833-a6cd-07d385ff61d5>,
+        <http://example.org/neuralnetwork/middleLayer_9_e0a4c429-1095-4833-a6cd-07d385ff61d5> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_e0a4c429-1095-4833-a6cd-07d385ff61d5> ;
+    nnet:reference <https://github.com/a-g-v/VoiceTurn> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_e0a4c429-1095-4833-a6cd-07d385ff61d5>,
+        <http://example.org/neuralnetwork/procedureFeature_2_e0a4c429-1095-4833-a6cd-07d385ff61d5> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_e0a4c429-1095-4833-a6cd-07d385ff61d5> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_e0a4c429-1095-4833-a6cd-07d385ff61d5> .
+
+<http://example.org/neuralnetwork/e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-23" ;
+    nnet:creator "Google" ;
+    nnet:dataset <https://arxiv.org/abs/1906.05721> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for detecting if a person with a \"morning mountain\" pose is in the image" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_e3592368-e253-46ac-8e9d-12a4e84ac856> ;
+    nnet:hasID "e3592368-e253-46ac-8e9d-12a4e84ac856" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_e3592368-e253-46ac-8e9d-12a4e84ac856> ;
+    nnet:hasMultiplyAccumulateOps 7.387976e+06 ;
+    nnet:hasTitle "Visual_Alarm_Clock" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_e3592368-e253-46ac-8e9d-12a4e84ac856> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_10_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_11_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_12_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_13_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_14_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_15_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_16_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_17_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_18_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_19_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_1_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_20_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_21_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_22_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_23_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_24_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_25_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_26_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_27_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_28_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_2_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_3_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_4_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_5_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_6_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_7_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_8_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/middleLayer_9_e3592368-e253-46ac-8e9d-12a4e84ac856> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_e3592368-e253-46ac-8e9d-12a4e84ac856> ;
+    nnet:reference <https://github.com/googlecreativelab/visual-alarm-clock> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_e3592368-e253-46ac-8e9d-12a4e84ac856>,
+        <http://example.org/neuralnetwork/procedureFeature_2_e3592368-e253-46ac-8e9d-12a4e84ac856> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_e3592368-e253-46ac-8e9d-12a4e84ac856> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_e3592368-e253-46ac-8e9d-12a4e84ac856> .
+
+<http://example.org/neuralnetwork/e98e3bfb-ddbe-46e7-aed5-b77654d84035> a nnet:NeuralNetwork ;
+    nnet:created "2021-11-18" ;
+    nnet:creator "Haoyu" ;
+    nnet:dataset <http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz> ;
+    nnet:hasCategory nnet:Classification ;
+    nnet:hasDescription "a NN for speech commands recognition yes/no" ;
+    nnet:hasHardwareReference <http://example.org/neuralnetwork/hardware_1_e98e3bfb-ddbe-46e7-aed5-b77654d84035> ;
+    nnet:hasID "e98e3bfb-ddbe-46e7-aed5-b77654d84035" ;
+    nnet:hasMetric <http://example.org/neuralnetwork/metric_1_e98e3bfb-ddbe-46e7-aed5-b77654d84035> ;
+    nnet:hasMultiplyAccumulateOps 3.36e+05 ;
+    nnet:hasTitle "Micro_Speech_Yes_No_3" ;
+    nnet:inputLayer <http://example.org/neuralnetwork/inputLayer_e98e3bfb-ddbe-46e7-aed5-b77654d84035> ;
+    nnet:location <https://github.com/Haoyu-R/TinyML-Research-Symposium-2022/tree/main/model_repo> ;
+    nnet:middleLayer <http://example.org/neuralnetwork/middleLayer_1_e98e3bfb-ddbe-46e7-aed5-b77654d84035>,
+        <http://example.org/neuralnetwork/middleLayer_2_e98e3bfb-ddbe-46e7-aed5-b77654d84035>,
+        <http://example.org/neuralnetwork/middleLayer_3_e98e3bfb-ddbe-46e7-aed5-b77654d84035> ;
+    nnet:outputLayer <http://example.org/neuralnetwork/outputLayer_e98e3bfb-ddbe-46e7-aed5-b77654d84035> ;
+    nnet:reference <https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples/micro_speech> ;
+    s3n:hasProcedureFeature <http://example.org/neuralnetwork/procedureFeature_1_e98e3bfb-ddbe-46e7-aed5-b77654d84035>,
+        <http://example.org/neuralnetwork/procedureFeature_2_e98e3bfb-ddbe-46e7-aed5-b77654d84035> ;
+    ssn:hasInput <http://example.org/neuralnetwork/input_e98e3bfb-ddbe-46e7-aed5-b77654d84035> ;
+    ssn:hasOutput <http://example.org/neuralnetwork/output_e98e3bfb-ddbe-46e7-aed5-b77654d84035> .
+
+<http://example.org/neuralnetwork/condition_1_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 8.864e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_022aa512-a8d8-43b0-8ebc-91d179215eeb> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 1.47828e+02 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_067af001-0d3f-4b64-9991-b37296c966f3> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 2.2712e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 2.36072e+02 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_15567ceb-9827-4431-8fde-bdd67bd02986> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 6.48e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_188e9833-ebee-4024-ac51-6271b931da90> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 1.9616e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_2be6232b-7575-4457-8546-eebb6bc0622e> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 1.848e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 8.864e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 1.7048e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_64a5598b-f9f5-4224-88ed-723bd955ee2d> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 1.8856e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 2.472e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 1.848e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 1.8712e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 3.1256e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 2.19896e+02 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 4.736e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_e0a4c429-1095-4833-a6cd-07d385ff61d5> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 8.048e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_e3592368-e253-46ac-8e9d-12a4e84ac856> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 5.31624e+02 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_1_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a demo:Flash,
+        s3n:Memory ;
+    rdfs:label "Flash requirement." ;
+    schema:minValue 1.8856e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 8.8e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_022aa512-a8d8-43b0-8ebc-91d179215eeb> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 4.848e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_067af001-0d3f-4b64-9991-b37296c966f3> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 8.08e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 9.4128e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_15567ceb-9827-4431-8fde-bdd67bd02986> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 2.848e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_188e9833-ebee-4024-ac51-6271b931da90> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 1.6784e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_2be6232b-7575-4457-8546-eebb6bc0622e> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 4.048e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 8.8e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 2.224e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_64a5598b-f9f5-4224-88ed-723bd955ee2d> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 1.048e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 1.936e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 4.048e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 8.08e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 1.208e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 2.5968e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 2.816e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_e0a4c429-1095-4833-a6cd-07d385ff61d5> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 6.288e+00 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_e3592368-e253-46ac-8e9d-12a4e84ac856> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 1.1648e+02 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/condition_2_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a demo:RAM,
+        s3n:Memory ;
+    rdfs:label "Ram requirement." ;
+    schema:minValue 1.048e+01 ;
+    schema:unitCode "om.kilobyte" .
+
+<http://example.org/neuralnetwork/hardware_1_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a nnet:Hardware,
+        nnet:Microphone ;
+    nnet:hasHardwareInfo "tested on MP34DT05" .
+
+<http://example.org/neuralnetwork/hardware_1_022aa512-a8d8-43b0-8ebc-91d179215eeb> a nnet:Accelerometer,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_1_067af001-0d3f-4b64-9991-b37296c966f3> a nnet:Hardware,
+        nnet:Microphone ;
+    nnet:hasHardwareInfo "tested on MP34DT05" .
+
+<http://example.org/neuralnetwork/hardware_1_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Camera,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on OV7675/0" .
+
+<http://example.org/neuralnetwork/hardware_1_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:Accelerometer,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_1_188e9833-ebee-4024-ac51-6271b931da90> a nnet:Accelerometer,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_1_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:Accelerometer,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_1_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a nnet:Hardware,
+        nnet:Microphone ;
+    nnet:hasHardwareInfo "tested on MP34DT05" .
+
+<http://example.org/neuralnetwork/hardware_1_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a nnet:Accelerometer,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_1_64a5598b-f9f5-4224-88ed-723bd955ee2d> a nnet:Hardware,
+        nnet:Microphone ;
+    nnet:hasHardwareInfo "tested on MP34DT05" .
+
+<http://example.org/neuralnetwork/hardware_1_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a nnet:Hardware,
+        nnet:OtherSensor ;
+    nnet:hasHardwareInfo "N.A." .
+
+<http://example.org/neuralnetwork/hardware_1_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:Accelerometer,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_1_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a nnet:Hardware,
+        nnet:Microphone ;
+    nnet:hasHardwareInfo "tested on MP34DT05" .
+
+<http://example.org/neuralnetwork/hardware_1_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:Accelerometer,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_1_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Hardware,
+        nnet:Microphone ;
+    nnet:hasHardwareInfo "tested on MP34DT05" .
+
+<http://example.org/neuralnetwork/hardware_1_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a nnet:Accelerometer,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_1_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Hardware,
+        nnet:Microphone ;
+    nnet:hasHardwareInfo "tested on MP34DT05" .
+
+<http://example.org/neuralnetwork/hardware_1_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Camera,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on OV7675/0" .
+
+<http://example.org/neuralnetwork/hardware_1_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a nnet:Hardware,
+        nnet:Microphone ;
+    nnet:hasHardwareInfo "tested on MP34DT05" .
+
+<http://example.org/neuralnetwork/hardware_2_022aa512-a8d8-43b0-8ebc-91d179215eeb> a nnet:Gyroscope,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_2_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:Gyroscope,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_2_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:Gyroscope,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_2_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a nnet:Gyroscope,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_2_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:Gyroscope,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/hardware_2_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:Gyroscope,
+        nnet:Hardware ;
+    nnet:hasHardwareInfo "tested on LSM9DS1 Range: [-4, +4] g  [-2000, +2000] dps 119 Hz" .
+
+<http://example.org/neuralnetwork/inputLayer_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[   1 1960]" .
+
+<http://example.org/neuralnetwork/inputLayer_022aa512-a8d8-43b0-8ebc-91d179215eeb> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:float32 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:true ;
+    nnet:shapeIn "[  1 714]" .
+
+<http://example.org/neuralnetwork/inputLayer_067af001-0d3f-4b64-9991-b37296c966f3> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[   1 1960]" .
+
+<http://example.org/neuralnetwork/inputLayer_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[ 1 96 96  1]" .
+
+<http://example.org/neuralnetwork/inputLayer_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:quantize ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[ 1 60]" .
+
+<http://example.org/neuralnetwork/inputLayer_188e9833-ebee-4024-ac51-6271b931da90> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:float32 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:true ;
+    nnet:shapeIn "[  1 128   3   1]" .
+
+<http://example.org/neuralnetwork/inputLayer_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:quantize ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[  1 300]" .
+
+<http://example.org/neuralnetwork/inputLayer_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[   1 1960]" .
+
+<http://example.org/neuralnetwork/inputLayer_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:float32 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:true ;
+    nnet:shapeIn "[ 1 60]" .
+
+<http://example.org/neuralnetwork/inputLayer_64a5598b-f9f5-4224-88ed-723bd955ee2d> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[   1 1960]" .
+
+<http://example.org/neuralnetwork/inputLayer_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[1 1]" .
+
+<http://example.org/neuralnetwork/inputLayer_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:quantize ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[  1 300]" .
+
+<http://example.org/neuralnetwork/inputLayer_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[   1 1960]" .
+
+<http://example.org/neuralnetwork/inputLayer_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[ 1 32 32  3]" .
+
+<http://example.org/neuralnetwork/inputLayer_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[   1 4160]" .
+
+<http://example.org/neuralnetwork/inputLayer_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[ 1 59]" .
+
+<http://example.org/neuralnetwork/inputLayer_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[  1 650]" .
+
+<http://example.org/neuralnetwork/inputLayer_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[ 1 96 96  1]" .
+
+<http://example.org/neuralnetwork/inputLayer_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeIn "[   1 1960]" .
+
+<http://example.org/neuralnetwork/input_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data" .
+
+<http://example.org/neuralnetwork/input_022aa512-a8d8-43b0-8ebc-91d179215eeb> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened sliding window of length 117 on 6d accelerometer and gyroscope data scaled to [0, 1]" .
+
+<http://example.org/neuralnetwork/input_067af001-0d3f-4b64-9991-b37296c966f3> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data" .
+
+<http://example.org/neuralnetwork/input_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a grey scale image of size 96 x 96 x 1 scaled to [0, 1]" .
+
+<http://example.org/neuralnetwork/input_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened sliding window of length 60 on 6d accelerometer and gyroscope data scaled to [-1, 1]" .
+
+<http://example.org/neuralnetwork/input_188e9833-ebee-4024-ac51-6271b931da90> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a sliding window of length 128 on 3d accelerometer data" .
+
+<http://example.org/neuralnetwork/input_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened sliding window of length 50 on 6d accelerometer and gyroscope data scaled to [-1, 1]" .
+
+<http://example.org/neuralnetwork/input_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data" .
+
+<http://example.org/neuralnetwork/input_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened sliding window of length 60 on 6d accelerometer and gyroscope data scaled to [-1, 1]" .
+
+<http://example.org/neuralnetwork/input_64a5598b-f9f5-4224-88ed-723bd955ee2d> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data" .
+
+<http://example.org/neuralnetwork/input_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a nnet:NetworkInput ;
+    nnet:hasInputInfo "any real value" .
+
+<http://example.org/neuralnetwork/input_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened sliding window of length 50 on 6d accelerometer and gyroscope data scaled to [-1, 1]" .
+
+<http://example.org/neuralnetwork/input_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data" .
+
+<http://example.org/neuralnetwork/input_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a 2D RGB image (rasterized stroke) from 3D IMU data" .
+
+<http://example.org/neuralnetwork/input_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened spectrogram based on FFT result on sequenced 20 ms sliding windows of 1000 ms microphone data" .
+
+<http://example.org/neuralnetwork/input_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a nnet:NetworkInput ;
+    nnet:hasInputInfo "1d PCA of a sliding window of length 59 on 3d accelerometer data" .
+
+<http://example.org/neuralnetwork/input_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened MFCC feature based on FFT result on sequenced sliding windows of 1000 ms microphone data" .
+
+<http://example.org/neuralnetwork/input_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a grey scale mage of size 96 x 96 scaled to [0, 1]" .
+
+<http://example.org/neuralnetwork/input_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a nnet:NetworkInput ;
+    nnet:hasInputInfo "a flattened MFCC feature based on FFT result on sequenced 30 ms sliding windows of 1000 ms microphone data" .
+
+<http://example.org/neuralnetwork/metric_1_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 8.23e+01 .
+
+<http://example.org/neuralnetwork/metric_1_022aa512-a8d8-43b0-8ebc-91d179215eeb> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_067af001-0d3f-4b64-9991-b37296c966f3> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_188e9833-ebee-4024-ac51-6271b931da90> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 9.92e+01 .
+
+<http://example.org/neuralnetwork/metric_1_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 8.3e+01 .
+
+<http://example.org/neuralnetwork/metric_1_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_64a5598b-f9f5-4224-88ed-723bd955ee2d> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 9.91e+01 .
+
+<http://example.org/neuralnetwork/metric_1_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 9.21e+01 .
+
+<http://example.org/neuralnetwork/metric_1_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 9.46e+01 .
+
+<http://example.org/neuralnetwork/metric_1_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a nnet:Metric,
+        nnet:other_metric ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 0e+00 .
+
+<http://example.org/neuralnetwork/metric_1_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a nnet:Metric,
+        nnet:top_1_accuracy ;
+    nnet:hasMetricValue 9.32e+01 .
+
+<http://example.org/neuralnetwork/middleLayer_10_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 10 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_10_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 10 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_11_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 11 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_11_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 11 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_12_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 12 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_12_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 12 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_13_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 13 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_13_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 13 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_14_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 14 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_14_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 14 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_15_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 15 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_15_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 15 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_16_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 16 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_16_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 16 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_17_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 17 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_17_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 17 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_18_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 18 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_18_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 18 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_19_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 19 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_19_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 19 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_022aa512-a8d8-43b0-8ebc-91d179215eeb> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:float32 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:true .
+
+<http://example.org/neuralnetwork/middleLayer_1_067af001-0d3f-4b64-9991-b37296c966f3> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_188e9833-ebee-4024-ac51-6271b931da90> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasType nnet:maxPool2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:float32 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:true .
+
+<http://example.org/neuralnetwork/middleLayer_1_64a5598b-f9f5-4224-88ed-723bd955ee2d> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Layer ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int32 ;
+    nnet:hasType nnet:resizeNearestNeighbor ;
+    nnet:isTrainable schema:true .
+
+<http://example.org/neuralnetwork/middleLayer_1_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_1_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 1 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_20_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 20 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_20_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 20 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_21_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 21 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_21_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 21 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_22_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 22 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_22_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 22 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_23_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 23 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_23_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 23 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_24_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 24 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_24_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 24 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_25_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 25 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_25_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 25 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_26_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 26 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_26_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasIndex 26 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_27_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 27 ;
+    nnet:hasType nnet:avgPool2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_27_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 27 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_28_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasIndex 28 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_022aa512-a8d8-43b0-8ebc-91d179215eeb> a nnet:Layer ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:float32 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:true .
+
+<http://example.org/neuralnetwork/middleLayer_2_067af001-0d3f-4b64-9991-b37296c966f3> a nnet:Layer ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_188e9833-ebee-4024-ac51-6271b931da90> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:float32 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:true .
+
+<http://example.org/neuralnetwork/middleLayer_2_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a nnet:Layer ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:float32 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:true .
+
+<http://example.org/neuralnetwork/middleLayer_2_64a5598b-f9f5-4224-88ed-723bd955ee2d> a nnet:Layer ;
+    nnet:hasIndex 2 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a nnet:Layer ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasIndex 2 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 2 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_2_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a nnet:Layer ;
+    nnet:hasIndex 2 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_188e9833-ebee-4024-ac51-6271b931da90> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasType nnet:maxPool2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_64a5598b-f9f5-4224-88ed-723bd955ee2d> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasType nnet:mean ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasType nnet:maxPool2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_3_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_4_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_4_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_4_188e9833-ebee-4024-ac51-6271b931da90> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 4 ;
+    nnet:hasQuantization nnet:float32 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:true .
+
+<http://example.org/neuralnetwork/middleLayer_4_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_4_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_4_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_4_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasType nnet:maxPool2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_4_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_4_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 4 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_5_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 5 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_5_188e9833-ebee-4024-ac51-6271b931da90> a nnet:Layer ;
+    nnet:hasIndex 5 ;
+    nnet:hasQuantization nnet:float32 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:true .
+
+<http://example.org/neuralnetwork/middleLayer_5_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Layer ;
+    nnet:hasIndex 5 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_5_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasActivation nnet:relu ;
+    nnet:hasIndex 5 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_5_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 5 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_6_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 6 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_6_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 6 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_6_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasIndex 6 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_6_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 6 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_7_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 7 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_7_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 7 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_7_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasIndex 7 ;
+    nnet:hasType nnet:maxPool2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_7_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 7 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_8_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 8 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_8_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Layer ;
+    nnet:hasIndex 8 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_8_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasIndex 8 ;
+    nnet:hasType nnet:reshape ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_8_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 8 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_9_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 9 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_9_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasIndex 9 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/middleLayer_9_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasActivation nnet:relu6 ;
+    nnet:hasIndex 9 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:depthwiseConv2D ;
+    nnet:isTrainable schema:false .
+
+<http://example.org/neuralnetwork/outputLayer_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a nnet:Layer ;
+    nnet:hasIndex 5 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 4]" .
+
+<http://example.org/neuralnetwork/outputLayer_022aa512-a8d8-43b0-8ebc-91d179215eeb> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 3]" .
+
+<http://example.org/neuralnetwork/outputLayer_067af001-0d3f-4b64-9991-b37296c966f3> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 5]" .
+
+<http://example.org/neuralnetwork/outputLayer_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:Layer ;
+    nnet:hasIndex 29 ;
+    nnet:hasQuantization nnet:uint8 ;
+    nnet:hasType nnet:conv2D ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 1 1 3]" .
+
+<http://example.org/neuralnetwork/outputLayer_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:Layer ;
+    nnet:hasIndex 6 ;
+    nnet:hasType nnet:dequantize ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 2]" .
+
+<http://example.org/neuralnetwork/outputLayer_188e9833-ebee-4024-ac51-6271b931da90> a nnet:Layer ;
+    nnet:hasIndex 7 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 4]" .
+
+<http://example.org/neuralnetwork/outputLayer_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:Layer ;
+    nnet:hasIndex 6 ;
+    nnet:hasType nnet:dequantize ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 2]" .
+
+<http://example.org/neuralnetwork/outputLayer_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a nnet:Layer ;
+    nnet:hasIndex 5 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 4]" .
+
+<http://example.org/neuralnetwork/outputLayer_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 2]" .
+
+<http://example.org/neuralnetwork/outputLayer_64a5598b-f9f5-4224-88ed-723bd955ee2d> a nnet:Layer ;
+    nnet:hasIndex 5 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 4]" .
+
+<http://example.org/neuralnetwork/outputLayer_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a nnet:Layer ;
+    nnet:hasIndex 3 ;
+    nnet:hasQuantization nnet:int8 ;
+    nnet:hasType nnet:fullyConnected ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 1]" .
+
+<http://example.org/neuralnetwork/outputLayer_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:Layer ;
+    nnet:hasIndex 6 ;
+    nnet:hasType nnet:dequantize ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 2]" .
+
+<http://example.org/neuralnetwork/outputLayer_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a nnet:Layer ;
+    nnet:hasIndex 4 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 4]" .
+
+<http://example.org/neuralnetwork/outputLayer_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:Layer ;
+    nnet:hasIndex 6 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[ 1 10]" .
+
+<http://example.org/neuralnetwork/outputLayer_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:Layer ;
+    nnet:hasIndex 10 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 2]" .
+
+<http://example.org/neuralnetwork/outputLayer_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a nnet:Layer ;
+    nnet:hasIndex 5 ;
+    nnet:hasType nnet:logistic ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[ 1 59]" .
+
+<http://example.org/neuralnetwork/outputLayer_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:Layer ;
+    nnet:hasIndex 11 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 4]" .
+
+<http://example.org/neuralnetwork/outputLayer_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:Layer ;
+    nnet:hasIndex 30 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 2]" .
+
+<http://example.org/neuralnetwork/outputLayer_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a nnet:Layer ;
+    nnet:hasIndex 5 ;
+    nnet:hasType nnet:softmax ;
+    nnet:isTrainable schema:false ;
+    nnet:shapeOut "[1 4]" .
+
+<http://example.org/neuralnetwork/output_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: silence, 1: unknown, 2: yes , 3: no" .
+
+<http://example.org/neuralnetwork/output_022aa512-a8d8-43b0-8ebc-91d179215eeb> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: circle, 1: left, 2: front" .
+
+<http://example.org/neuralnetwork/output_067af001-0d3f-4b64-9991-b37296c966f3> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: silence, 1: unknown, 2: up , 3: Down, 4: go" .
+
+<http://example.org/neuralnetwork/output_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: no_person, 1: persen" .
+
+<http://example.org/neuralnetwork/output_15567ceb-9827-4431-8fde-bdd67bd02986> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: jump, 1: punch" .
+
+<http://example.org/neuralnetwork/output_188e9833-ebee-4024-ac51-6271b931da90> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: wing, 1: ring, 2: slope, 3: unknown" .
+
+<http://example.org/neuralnetwork/output_2be6232b-7575-4457-8546-eebb6bc0622e> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: up, 1: forward" .
+
+<http://example.org/neuralnetwork/output_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: silence, 1: unknown, 2: yes , 3: no" .
+
+<http://example.org/neuralnetwork/output_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: straight, 1: squats" .
+
+<http://example.org/neuralnetwork/output_64a5598b-f9f5-4224-88ed-723bd955ee2d> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: silence, 1: unknown, 2: forward , 3: backward" .
+
+<http://example.org/neuralnetwork/output_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "sine value of the input" .
+
+<http://example.org/neuralnetwork/output_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: right, 1: left" .
+
+<http://example.org/neuralnetwork/output_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: silence, 1: unknown, 2: yes , 3: no" .
+
+<http://example.org/neuralnetwork/output_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "gestures of the digits 0-9" .
+
+<http://example.org/neuralnetwork/output_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: no_snoring, 1: snoring" .
+
+<http://example.org/neuralnetwork/output_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "reconstructed input" .
+
+<http://example.org/neuralnetwork/output_e0a4c429-1095-4833-a6cd-07d385ff61d5> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: Left, 1: right, 2: noise, 3: other" .
+
+<http://example.org/neuralnetwork/output_e3592368-e253-46ac-8e9d-12a4e84ac856> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: no_pose, 1: pose" .
+
+<http://example.org/neuralnetwork/output_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a nnet:NetworkOutput ;
+    nnet:hasOutputInfo "0: silence, 1: unknown, 2: yes , 3: no" .
+
+<http://example.org/neuralnetwork/procedureFeature_1_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_022aa512-a8d8-43b0-8ebc-91d179215eeb> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_022aa512-a8d8-43b0-8ebc-91d179215eeb> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_067af001-0d3f-4b64-9991-b37296c966f3> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_067af001-0d3f-4b64-9991-b37296c966f3> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_10bb3204-67bb-4b5f-9874-0ec8e73e2721> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_15567ceb-9827-4431-8fde-bdd67bd02986> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_15567ceb-9827-4431-8fde-bdd67bd02986> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_188e9833-ebee-4024-ac51-6271b931da90> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_188e9833-ebee-4024-ac51-6271b931da90> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_2be6232b-7575-4457-8546-eebb6bc0622e> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_2be6232b-7575-4457-8546-eebb6bc0622e> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_64a5598b-f9f5-4224-88ed-723bd955ee2d> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_64a5598b-f9f5-4224-88ed-723bd955ee2d> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_e0a4c429-1095-4833-a6cd-07d385ff61d5> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_e0a4c429-1095-4833-a6cd-07d385ff61d5> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_e3592368-e253-46ac-8e9d-12a4e84ac856> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_e3592368-e253-46ac-8e9d-12a4e84ac856> .
+
+<http://example.org/neuralnetwork/procedureFeature_1_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_1" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_1_e98e3bfb-ddbe-46e7-aed5-b77654d84035> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_01f6ad1c-b24a-4159-9f38-7a30ea8914ca> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_022aa512-a8d8-43b0-8ebc-91d179215eeb> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_022aa512-a8d8-43b0-8ebc-91d179215eeb> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_067af001-0d3f-4b64-9991-b37296c966f3> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_067af001-0d3f-4b64-9991-b37296c966f3> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_10bb3204-67bb-4b5f-9874-0ec8e73e2721> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_10bb3204-67bb-4b5f-9874-0ec8e73e2721> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_15567ceb-9827-4431-8fde-bdd67bd02986> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_15567ceb-9827-4431-8fde-bdd67bd02986> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_188e9833-ebee-4024-ac51-6271b931da90> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_188e9833-ebee-4024-ac51-6271b931da90> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_2be6232b-7575-4457-8546-eebb6bc0622e> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_2be6232b-7575-4457-8546-eebb6bc0622e> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_368908f9-ffdc-4a6d-ba44-ecf9ff7f30ad> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_50d41e3f-128c-4a43-b9ad-75d3d95a16ea> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_64a5598b-f9f5-4224-88ed-723bd955ee2d> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_64a5598b-f9f5-4224-88ed-723bd955ee2d> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_7eb01d5c-e9c3-4055-8ba2-cc19dd5ec417> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_b035ae0f-4965-4e2a-85f0-9eaba2d0f33c> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_ba00a1b0-0604-43f2-ab8b-bb43d34e29d8> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_c8caaf57-a4f5-41a3-b239-f7c82a0d77eb> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_d14ddd52-dfa2-4d33-b7ab-e1a67f48b0bd> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_dc1215f2-a28f-4376-80ad-47bd21f6a2bd> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_e0a4c429-1095-4833-a6cd-07d385ff61d5> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_e0a4c429-1095-4833-a6cd-07d385ff61d5> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_e3592368-e253-46ac-8e9d-12a4e84ac856> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_e3592368-e253-46ac-8e9d-12a4e84ac856> .
+
+<http://example.org/neuralnetwork/procedureFeature_2_e98e3bfb-ddbe-46e7-aed5-b77654d84035> a s3n:ProcedureFeature ;
+    rdfs:label "procedureFeature_2" ;
+    ssn-system:inCondition <http://example.org/neuralnetwork/condition_2_e98e3bfb-ddbe-46e7-aed5-b77654d84035> .
+
+

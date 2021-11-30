@@ -1,0 +1,253 @@
+# baseURI: http://w3id.org/s3n/S3NProcedure
+# imports: http://w3id.org/s3n/S3NCore
+# imports: http://www.w3.org/ns/ssn/systems/
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s3n: <http://w3id.org/s3n/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://maxime-lefrancois.info/me#>
+  rdf:type foaf:Agent ;
+  foaf:name "Maxime Lefrançois"@en ;
+.
+dcterms:created
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:creator
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:description
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:license
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:rights
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:title
+  rdf:type owl:AnnotationProperty ;
+.
+vann:preferredNamespacePrefix
+  rdf:type owl:AnnotationProperty ;
+.
+vann:preferredNamespaceUri
+  rdf:type owl:AnnotationProperty ;
+.
+voaf:Vocabulary
+  rdf:type owl:Class ;
+.
+schema:domainIncludes
+  rdf:type owl:AnnotationProperty ;
+.
+schema:rangeIncludes
+  rdf:type owl:AnnotationProperty ;
+.
+s3n:ComputationalCost
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy s3n:S3NProcedure ;
+  rdfs:label "Computational Cost"@en ;
+  rdfs:subClassOf s3n:ProcedureProperty ;
+  skos:definition "The computational cost of the Procedure under under the defined Conditions."@en ;
+.
+s3n:MaximumBandwidth
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy s3n:S3NProcedure ;
+  rdfs:label "Maximum Bandwidth"@en ;
+  rdfs:subClassOf ssn-system:SystemProperty ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:allValuesFrom s3n:CommunicatingSystem ;
+          owl:onProperty [
+              owl:inverseOf s3n:hasSystemCapability ;
+            ] ;
+        ] ;
+      owl:onProperty [
+          owl:inverseOf ssn-system:hasSystemProperty ;
+        ] ;
+    ] ;
+  skos:definition "The maximal bandwidth of the communicating device under the defined Conditions."@en ;
+.
+s3n:Memory
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy s3n:S3NProcedure ;
+  rdfs:label "Memory"@en ;
+  rdfs:subClassOf ssn-system:SystemProperty ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:allValuesFrom s3n:MicroController ;
+          owl:onProperty [
+              owl:inverseOf s3n:hasSystemCapability ;
+            ] ;
+        ] ;
+      owl:onProperty [
+          owl:inverseOf ssn-system:hasSystemProperty ;
+        ] ;
+    ] ;
+  skos:definition "The memory of the micro-controller under the defined Conditions."@en ;
+.
+s3n:ProcedureFeature
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy s3n:S3NProcedure ;
+  rdfs:label "Procedure Feature"@en ;
+  rdfs:subClassOf ssn:Property ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom s3n:Algorithm ;
+      owl:onProperty [
+          owl:inverseOf s3n:hasProcedureFeature ;
+        ] ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom s3n:ProcedureProperty ;
+      owl:onProperty s3n:hasProcedureProperty ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom ssn-system:Condition ;
+      owl:onProperty ssn-system:inCondition ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ssn-system:inCondition ;
+    ] ;
+  skos:definition """Describes procedure properties such as the duration, computational cost, storage cost, etc. of a Procedure under some specified Conditions such as a size of input.
+
+    The features specified here are those that affect the Procedure executions."""@en ;
+.
+s3n:ProcedureProperty
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy s3n:S3NProcedure ;
+  rdfs:label "Procedure Property"@en ;
+  rdfs:subClassOf ssn:Property ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom s3n:ProcedureFeature ;
+      owl:onProperty [
+          owl:inverseOf s3n:hasProcedureProperty ;
+        ] ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty [
+          owl:inverseOf s3n:hasProcedureProperty ;
+        ] ;
+    ] ;
+  skos:definition "An identifiable characteristic that represents typical characteristics of the Procedure's executions."@en ;
+.
+s3n:S3NProcedure
+  rdf:type voaf:Vocabulary ;
+  rdf:type owl:Ontology ;
+  dcterms:created "2018-01-11"^^xsd:date ;
+  dcterms:creator <http://maxime-lefrancois.info/me#> ;
+  dcterms:creator [
+      rdf:type foaf:Agent ;
+      foaf:name "Samya Sagar"@en ;
+    ] ;
+  dcterms:description "This ontology extends the S3N-Core Ontology and the OGC/W3C SSN-System ontology to describe SystemCapabilities relevant for MicroControllers and CommunicatingSystems, along with AlgorithmFeatures in certain conditions."@en ;
+  dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+  dcterms:title "Semantic Smart Sensor Network (S3N) Ontology: Algorithm Module"@en ;
+  vann:preferredNamespacePrefix "s3n" ;
+  vann:preferredNamespaceUri "http://w3id.org/s3n/" ;
+  owl:imports s3n:S3NCore ;
+  owl:imports ssn-system: ;
+.
+s3n:SpaceComplexity
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy s3n:S3NProcedure ;
+  rdfs:label "Space Complexity"@en ;
+  rdfs:subClassOf s3n:ProcedureProperty ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:allValuesFrom s3n:Algorithm ;
+          owl:onProperty [
+              owl:inverseOf s3n:hasProcedureFeature ;
+            ] ;
+        ] ;
+      owl:onProperty [
+          owl:inverseOf s3n:hasProcedureProperty ;
+        ] ;
+    ] ;
+  skos:definition "The complexity in space of the Procedure under under the defined Conditions."@en ;
+.
+s3n:TimeComplexity
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy s3n:S3NProcedure ;
+  rdfs:label "Time Complexity"@en ;
+  rdfs:subClassOf s3n:ProcedureProperty ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Restriction ;
+          owl:allValuesFrom s3n:Algorithm ;
+          owl:onProperty [
+              owl:inverseOf s3n:hasProcedureFeature ;
+            ] ;
+        ] ;
+      owl:onProperty [
+          owl:inverseOf s3n:hasProcedureProperty ;
+        ] ;
+    ] ;
+  skos:definition "The complexity in time of the Procedure under under the defined Conditions."@en ;
+.
+s3n:hasProcedureFeature
+  rdf:type owl:ObjectProperty ;
+  rdfs:isDefinedBy s3n:S3NProcedure ;
+  rdfs:label "has procedure feature"@en ;
+  rdfs:subPropertyOf ssn:hasProperty ;
+  skos:definition "Relation from a Procedure to a SystemCapability describing the capabilities of the System under certain Conditions."@en ;
+.
+s3n:hasProcedureProperty
+  rdf:type owl:ObjectProperty ;
+  rdfs:isDefinedBy s3n:S3NProcedure ;
+  rdfs:label "has procedure property"@en ;
+  rdfs:subPropertyOf ssn:hasProperty ;
+  skos:definition "Relation from an ProcedureFeature of a Procedure to a ProcedureProperty describing the features of the Procedure."@en ;
+.
+skos:definition
+  rdf:type owl:AnnotationProperty ;
+.
+skos:example
+  rdf:type owl:AnnotationProperty ;
+.
+skos:note
+  rdf:type owl:AnnotationProperty ;
+.
+time:TemporalEntity
+  rdf:type owl:Class ;
+.
+sosa:Procedure
+  rdfs:isDefinedBy sosa: ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom s3n:ProcedureFeature ;
+      owl:onProperty s3n:hasProcedureFeature ;
+    ] ;
+.
+foaf:Agent
+  rdf:type owl:Class ;
+.
+foaf:name
+  rdf:type owl:AnnotationProperty ;
+.

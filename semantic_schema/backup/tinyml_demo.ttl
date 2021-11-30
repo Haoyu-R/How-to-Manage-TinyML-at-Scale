@@ -1,0 +1,219 @@
+# baseURI: http://ureasoner.org/tinyml-demo
+# imports: http://ureasoner.org/networkschema
+# imports: http://w3id.org/s3n/S3NCore
+# imports: http://w3id.org/s3n/S3NProcedure
+# imports: http://w3id.org/s3n/S3NThing
+# imports: http://www.ontology-of-units-of-measure.org/resource/om-2/
+# imports: http://w3id.org/s3n/
+
+@prefix : <http://ureasoner.org/tinyml-demo#> .
+@prefix nnet: <http://ureasoner.org/networkschema#> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s3n: <http://w3id.org/s3n/> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ureasoner.org/tinyml-demo>
+  rdf:type owl:Ontology ;
+  owl:imports <http://ureasoner.org/networkschema> ;
+  owl:imports <http://w3id.org/s3n/S3NCore> ;
+  owl:imports <http://w3id.org/s3n/S3NProcedure> ;
+  owl:imports <http://w3id.org/s3n/S3NThing> ;
+  owl:imports om: ;
+  owl:imports s3n: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+
+# Sensor
+:Thermometer
+  rdf:type owl:Class ;
+  rdfs:label "Thermometer" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:Accelerometer
+  rdf:type owl:Class ;
+  rdfs:label "Accelerometer" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:Camera
+  rdf:type owl:Class ;
+  rdfs:label "Camera" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:Gyroscope
+  rdf:type owl:Class ;
+  rdfs:label "Gyroscopes" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:Magnetometer
+  rdf:type owl:Class ;
+  rdfs:label "Magnetometer" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:Microphone
+  rdf:type owl:Class ;
+  rdfs:label "Microphone" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+
+
+# Sensor Observation
+:temperature
+  rdf:type sosa:ObservableProperty ;
+  rdfs:label "temperature" ;
+.
+:acceleration
+  rdf:type sosa:ObservableProperty ;
+  rdfs:label "acceleration" ;
+.
+:image
+  rdf:type sosa:ObservableProperty ;
+  rdfs:label "image" ;
+.
+:orientation
+  rdf:type sosa:ObservableProperty ;
+  rdfs:label "orientation" ;
+.
+:magneticField
+  rdf:type sosa:ObservableProperty ;
+  rdfs:label "magnetic field" ;
+.
+:sound
+  rdf:type sosa:ObservableProperty ;
+  rdfs:label "sound" ;
+.
+
+# Sensor Data
+:TemperatureData
+  rdf:type s3n:AlgorithmExecution ;
+  rdfs:label "TemperatureData" ;
+.
+:AccelerationData
+  rdf:type s3n:AlgorithmExecution ;
+  rdfs:label "accelerationData" ;
+.
+:ImageData
+  rdf:type s3n:AlgorithmExecution ;
+  rdfs:label "ImageData" ;
+.
+:OrientationData
+  rdf:type s3n:AlgorithmExecution ;
+  rdfs:label "OrientationData" ;
+.
+:MagneticFieldData
+  rdf:type s3n:AlgorithmExecution ;
+  rdfs:label "MagneticFieldData" ;
+.
+:SoundData
+  rdf:type s3n:AlgorithmExecution ;
+  rdfs:label "SoundData" ;
+.
+
+# Micro Controller
+:ssiWeb_1
+  rdf:type <http://w3id.org/s3n/SmartSensor> ;
+  rdfs:label "ssiWeb_1" ;
+  ssn:hasSubSystem :microController_1 ;
+  ssn:hasSubSystem :Thermometer_1 ;
+  ssn:hasSubSystem :Accelerometer_1 ;
+  ssn:hasSubSystem :Gyroscope_1 ;
+.
+:microController_1
+  rdf:type <http://w3id.org/s3n/MicroController> ;
+  rdfs:label "microController_1" ;
+.
+:Thermometer_1
+  rdf:type :Thermometer ;
+  rdfs:label "Thermometer_1" ;
+.
+:Accelerometer_1
+  rdf:type :Accelerometer ;
+  rdfs:label "Accelerometer_1" ;
+.
+:Gyroscope_1
+  rdf:type :Gyroscope ;
+  rdfs:label "Gyroscope_1" ;
+.
+
+:Arduino-Nano-BLE-33_1
+  rdf:type <http://w3id.org/s3n/SmartSensor> ;
+  rdfs:label "Arduino-Nano-BLE-33_1" ;
+  ssn:hasSubSystem :microController_2 ;
+  ssn:hasSubSystem :Thermometer_2 ;
+  ssn:hasSubSystem :Accelerometer_2;
+  ssn:hasSubSystem :Gyroscope_2 ;
+  ssn:hasSubSystem :Magnetometer_2 ;
+  ssn:hasSubSystem :Microphone_2 ;
+.
+:microController_2
+  rdf:type <http://w3id.org/s3n/MicroController> ;
+  rdfs:label "microController_2" ;
+.
+:Thermometer_2
+  rdf:type :Thermometer ;
+  rdfs:label "Thermometer_2" ;
+.
+:Accelerometer_2
+  rdf:type :Accelerometer ;
+  rdfs:label "Accelerometer_2" ;
+.
+:Gyroscope_2
+  rdf:type :Gyroscope ;
+  rdfs:label "Gyroscope_2" ;
+.
+:Magnetometer_2
+  rdf:type :Magnetometer ;
+  rdfs:label "Magnetometer_2" ;
+.
+:Microphone_2
+  rdf:type :Microphone ;
+  rdfs:label "Microphone_2" ;
+.
+
+:Arduino-Nano-BLE-33-Tinyml-Kit_1
+  rdf:type <http://w3id.org/s3n/SmartSensor> ;
+  rdfs:label "Arduino-Nano-BLE-33-Tinyml-Kit_1" ;
+  ssn:hasSubSystem :microController_3 ;
+  ssn:hasSubSystem :Thermometer_3 ;
+  ssn:hasSubSystem :Accelerometer_3;
+  ssn:hasSubSystem :Gyroscope_3 ;
+  ssn:hasSubSystem :Magnetometer_3 ;
+  ssn:hasSubSystem :Microphone_3 ;
+  ssn:hasSubSystem :Camera_3 ;
+.
+:microController_3
+  rdf:type <http://w3id.org/s3n/MicroController> ;
+  rdfs:label "microController_3" ;
+.
+:Thermometer_3
+  rdf:type :Thermometer ;
+  rdfs:label "Thermometer_3" ;
+.
+:Accelerometer_3
+  rdf:type :Accelerometer ;
+  rdfs:label "Accelerometer_3" ;
+.
+:Gyroscope_3
+  rdf:type :Gyroscope ;
+  rdfs:label "Gyroscope_3" ;
+.
+:Magnetometer_3
+  rdf:type :Magnetometer ;
+  rdfs:label "Magnetometer_3" ;
+.
+:Microphone_3
+  rdf:type :Microphone ;
+  rdfs:label "Microphone_3" ;
+.
+:Camera_3
+  rdf:type :Camera ;
+  rdfs:label "Camera_3" ;
+.
+
+

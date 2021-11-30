@@ -1,0 +1,141 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix schema: <https://schema.org/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+
+@prefix s3n: <http://w3id.org/s3n/> .
+
+
+foaf:Agent a owl:Class .
+foaf:name a owl:AnnotationProperty .
+voaf:Vocabulary a owl:Class .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:rights a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+dcterms:created a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+skos:definition a owl:AnnotationProperty .
+skos:example a owl:AnnotationProperty .
+skos:note a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+schema:domainIncludes a owl:AnnotationProperty .
+schema:rangeIncludes a owl:AnnotationProperty .
+time:TemporalEntity a owl:Class .
+
+
+s3n:S3NCore a owl:Ontology , voaf:Vocabulary ;
+  dcterms:title "Semantic Smart Sensor Network (S3N) Ontology: Core Module"@en ;
+  dcterms:description "This ontology extends the OGC/W3C SOSA/SSN ontology to describe Smart Sensors."@en ;
+  dcterms:creator <http://maxime-lefrancois.info/me#> ;
+  dcterms:creator [ a foaf:Agent ; foaf:name "Samya Sagar"@en ] ;
+  dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+  dcterms:created "2018-01-11"^^xsd:date ;
+  owl:imports ssn: ;
+  vann:preferredNamespacePrefix "s3n" ;
+  vann:preferredNamespaceUri "http://w3id.org/s3n/" .
+
+<http://maxime-lefrancois.info/me#> a foaf:Agent ; foaf:name "Maxime Lefrançois"@en .
+
+## Properties
+
+s3n:Indicator a rdfs:Class , owl:Class ;
+  rdfs:label "Indicator"@en ;
+  skos:definition "A specific property that has a specific use in a specific domain."@en ;
+  rdfs:subClassOf ssn:Property ;
+  rdfs:isDefinedBy s3n:S3NCore .
+
+## ProcedureExecutors
+
+s3n:MicroController a rdfs:Class ; a owl:Class ;
+  rdfs:label "Micro-Controller"@en ;
+  skos:definition "A MicroController is a compact integrated circuit containing a processor, some memory, and input/output (I/O) peripherals on a single chip, and is designed to govern a specific operation in an embedded system. It implements some Procedures, and makes ProcedureExecutions."@en ;
+  rdfs:subClassOf ssn:System ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ssn:implements ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty s3n:madeAlgorithmExecution ; owl:allValuesFrom s3n:AlgorithmExecution ] ;
+  rdfs:isDefinedBy s3n:S3NCore .
+
+s3n:CommunicatingSystem a rdfs:Class ; a owl:Class ;
+  rdfs:label "Communicating System"@en ;
+  skos:definition "A CommunicatingSystem can be used to exchange information with other CommunicatingSystem on some network."@en ;
+  rdfs:subClassOf ssn:System ;
+  rdfs:isDefinedBy s3n:S3NCore .
+
+s3n:SmartSensor a rdfs:Class ; a owl:Class ;
+  rdfs:label "Smart-Sensor"@en ;
+  skos:definition "A SmartSensor is composed of one or more Sensors together with a MicroController that implements different Procedures, and make Executions of these Procedures on the result of the Observations these Sensors make to output a resulting value for some Indicator. This value may then be communicated by some CommunicatingSystem."@en ;
+  rdfs:subClassOf ssn:System ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ssn:hasSubSystem ; owl:someValuesFrom sosa:Sensor ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ssn:hasSubSystem ; owl:someValuesFrom s3n:MicroController ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ssn:hasSubSystem ; owl:someValuesFrom s3n:CommunicatingSystem ] ;
+  rdfs:isDefinedBy s3n:S3NCore .
+
+sosa:hosts a owl:ObjectProperty ;
+  schema:domainIncludes s3n:SmartSensor ;
+  schema:rangeIncludes s3n:Microcontroller ;
+  schema:rangeIncludes s3n:CommunicatingSystem ;
+  rdfs:isDefinedBy sosa: .
+
+
+## Procedures
+
+s3n:Algorithm a rdfs:Class , owl:Class ;
+  rdfs:label "Algorithm"@en ;
+  skos:definition "A re-useable algorithm that might be executed multiple times by multiple Systems. It contains a declarative specification of the steps to be carried out to arrive at some result."@en ;
+  rdfs:subClassOf sosa:Procedure ;
+  rdfs:isDefinedBy s3n:S3NCore .
+
+  s3n:forContext a owl:ObjectProperty ;
+    rdfs:label "for context"@en ;
+    skos:definition "The context of use of an algorithm."@en ;
+    schema:domainIncludes s3n:Algorithm ;
+    rdfs:isDefinedBy s3n:S3NCore .
+
+## ProcedureExecutions
+
+sosa:usedProcedure 
+  schema:domainIncludes sosa:Observation ;
+  rdfs:isDefinedBy sosa: .
+
+s3n:AlgorithmExecution a rdfs:Class , owl:Class ;
+  rdfs:label "Algorithm Execution"@en ;
+  skos:definition "Act of executing an algorithm."@en ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:usedProcedure ; owl:allValuesFrom s3n:Algorithm ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:minCardinality "1"^^xsd:nonNegativeInteger ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:hasResult ; owl:allValuesFrom sosa:Result ] ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sosa:resultTime ; owl:cardinality "1"^^xsd:nonNegativeInteger ] ;  
+  rdfs:isDefinedBy s3n:S3NCore .
+
+  s3n:madeAlgorithmExecution a owl:ObjectProperty ;
+    rdfs:label "made algorithm execution"@en ;
+    skos:definition "Relation between a MicroController and an AlgorithmExecution it made."@en ;
+    schema:domainIncludes s3n:MicroController ;
+    schema:rangeIncludes s3n:AlgorithmExecution ;
+    rdfs:isDefinedBy s3n:S3NCore .
+
+## Error
+
+s3n:Error a rdfs:Class , owl:Class ;
+  rdfs:label "Error"@en ;
+  skos:definition "A specific result that is an error. May be further described in terms of its cause."@en ;
+  rdfs:subClassOf sosa:Result ;
+  rdfs:isDefinedBy s3n:S3NCore .
+
+  s3n:cause a owl:ObjectProperty ;
+    rdfs:label "cause"@en ;
+    skos:definition "The cause of an Error."@en ;
+    schema:domainIncludes s3n:Error ;
+    rdfs:isDefinedBy s3n:S3NCore .
+
+
+
