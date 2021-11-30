@@ -5,7 +5,7 @@ The future of machine learning is tiny and bright. More and more TinyML solution
 For more information on the project, please see our paper
 [Make TinyML Manageble]()
 
-![Capture1.png](/_resources/Capture1.png)
+![Capture1.png](/_resources/Capture1.PNG)
 
 ## Documentation
 * [collected_models](): the TinyML models (tflite) that we collected
@@ -50,7 +50,7 @@ To deploy the tflite model from a central device to an Arduino Nano 33 BLE Sense
 
 ## The semantic schema of TinyML NN
 
-![Capture2.png](/_resources/Capture2.png)
+![Capture2.png](/_resources/Capture1.PNG)
 
 ## Citation
 If our work has been useful for your research and you would like to cite it in an scientific publication, please cite [Make TinyML manageble]() as follows:
