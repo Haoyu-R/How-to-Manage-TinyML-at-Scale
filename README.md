@@ -50,7 +50,7 @@ To deploy the tflite model from a central device to an Arduino Nano 33 BLE Sense
 
 ## The semantic schema of TinyML NN
 
-![Capture2.png](/_resources/Capture1.PNG)
+![Capture2.png](/_resources/Capture2.PNG)
 
 ## Citation
 If our work has been useful for your research and you would like to cite it in an scientific publication, please cite [Make TinyML manageble]() as follows:
