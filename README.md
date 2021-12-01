@@ -7,7 +7,7 @@ For more information on the project, please see our paper
 
 ![12509dfefa3d75750a8b9294f6ad884b.png](:/54711c1808d04ce0876165229d732caf)
 
-![Capture1.png](/_resources/Capture1.png)
+![Capture1.png](/_resources/Capture1.PNG)
 
 ## Citation
 If our work has been useful for your research and you would like to cite it in an scientific publication, please cite [How to Manage TinyML Smartly]() as follows:
@@ -59,7 +59,7 @@ To deploy the tflite micro model from a central device to an Arduino Nano 33 BLE
 ## Semantic Schema of Neural Network
 ![961af19eb428337dd0bbbb3c5d5a9cf4.png](:/47c243a3d4ac4438b9a608fe191c0e66)
 
-![Capture2.png](/_resources/Capture2.png)
+![Capture2.png](/_resources/Capture2.PNG)
 
 ## To do
 ```
