@@ -1,6 +1,6 @@
 # Example 1: Given a NN and search in the knowledge graph which device is capable of running it
 # In the example 1, we assume that based on the parsing result we have to feed accelerometer and gyroscope data
-# into the NN. And the minimum requirement for RAM is 116 kb and for Flash is 531 kb
+# into the NN. And the minimum RAM for running NN for RAM is 116 kb and Flash is 531 kb
 query_1 = str("""
 PREFIX s3n: <http://w3id.org/s3n/>
 PREFIX sosa: <http://www.w3.org/ns/sosa/> 
@@ -13,7 +13,6 @@ PREFIX om: <http://www.ontology-of-units-of-measure.org/resource/om-2/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX td: <https://www.w3.org/2019/wot/td#>
 PREFIX nnet: <http://ureasoner.org/networkschema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?multiSensor ?ram_memory ?flash_memory ?description
 WHERE {
@@ -42,7 +41,7 @@ WHERE {
 
 # Example 2: Given a microcontroller and search in the knowledge graph which NN can be used on the device
 # In the example 2, we assume that based on the parsing result the microcontroller has a camera sensor
-# And it has only is 117 kb free RAM and 236 kb free Flash
+# And it has only is 117 kb free RAM and 237 kb free Flash
 query_2 = str("""
 PREFIX s3n: <http://w3id.org/s3n/>
 PREFIX sosa: <http://www.w3.org/ns/sosa/> 
@@ -55,7 +54,6 @@ PREFIX om: <http://www.ontology-of-units-of-measure.org/resource/om-2/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX td: <https://www.w3.org/2019/wot/td#>
 PREFIX nnet: <http://ureasoner.org/networkschema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?neuralNetwork ?id ?category ?MultiplyAccumulateOps ?ram_memory ?flash_memory ?hardwareInfo ?creator ?description ?reference
 WHERE {
@@ -88,11 +86,12 @@ WHERE {
               nnet:hasHardwareInfo ?hardwareInfo .
     
     FILTER (?ram_memory <= 117)
-    FILTER (?flash_memory <= 236)
+    FILTER (?flash_memory <= 237)
 }
 """)
 
-# Example 3: We want to query and benchmark NN given a few conditions
+# Example 3: Suppose we want to run a NN on an existing device for a specific task.
+# We want to query and benchmark NN that can fulfill the requirements such as memory, sensor, task specification
 query_3 = str("""
 PREFIX s3n: <http://w3id.org/s3n/>
 PREFIX sosa: <http://www.w3.org/ns/sosa/> 
@@ -105,9 +104,8 @@ PREFIX om: <http://www.ontology-of-units-of-measure.org/resource/om-2/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX td: <https://www.w3.org/2019/wot/td#>
 PREFIX nnet: <http://ureasoner.org/networkschema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?neuralNetwork ?id ?category ?top_1_acc ?MultiplyAccumulateOps ?min_ram_memory ?min_flash_memory ?hardwareInfo ?creator ?description ?reference
+SELECT ?neuralNetwork ?id ?category ?top_1_acc ?MultiplyAccumulateOps ?min_ram_memory ?min_flash_memory ?hardwareInfo ?creator ?description ?reference ?dataset
 WHERE {
     ?neuralNetwork a nnet:NeuralNetwork ;
     nnet:hasID ?id ;               
@@ -118,6 +116,7 @@ WHERE {
     nnet:reference ?reference ;
     nnet:hasMetric ?metric ;
     nnet:hasMultiplyAccumulateOps ?MultiplyAccumulateOps ;
+    nnet:dataset ?dataset ;
     s3n:hasProcedureFeature ?x_1 ;
     s3n:hasProcedureFeature ?x_2 ;
     ssn:hasInput ?input ;
@@ -125,9 +124,6 @@ WHERE {
 
     ?metric a nnet:top_1_accuracy .
     ?metric nnet:hasMetricValue ?top_1_acc .
-            
-    ?input nnet:hasInputInfo ?inputInfo .
-    ?output nnet:hasOutputInfo ?outputInfo .
     
 	?x_1 ssn-system:inCondition ?cond_1 .
     ?x_2 ssn-system:inCondition ?cond_2 .
@@ -142,6 +138,7 @@ WHERE {
               nnet:hasHardwareInfo ?hardwareInfo .
     
     FILTER regex(?description, "yes/no", "i")
+    FILTER regex(str(?dataset), "speech_commands", "i")
 }
 ORDER BY ?top_1_acc
 """)

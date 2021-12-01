@@ -1,12 +1,12 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
-from sparqlQueries import *
+from sparql_queries import *
 import json
 
 # Put the repository URL from Graph DB here
-sparql = SPARQLWrapper(r"http://192.168.35.1:7200/repositories/NN_usecase")
+sparql = SPARQLWrapper(r"http://192.168.1.108:7200/repositories/tinyml_2022")
 
 # Put the query here
-sparql.setQuery(query_1)
+sparql.setQuery(query_2)
 sparql.setReturnFormat(JSON)
 results = sparql.query().convert()
 
