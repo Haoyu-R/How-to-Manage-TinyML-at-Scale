@@ -5,8 +5,6 @@ The future of machine learning (ML) is tiny and bright. Embedded ML has risen to
 For more information on the project, please see our paper
 [How to Manage TinyML Smartly]()
 
-![12509dfefa3d75750a8b9294f6ad884b.png](:/54711c1808d04ce0876165229d732caf)
-
 ![Capture1.png](/_resources/Capture1.PNG)
 
 ## Citation
@@ -57,7 +55,6 @@ To work with the semantic representations of neural networks and embedded device
 To deploy the tflite micro model from a central device to an Arduino Nano 33 BLE Sense board using BLE and change the onboard model without reflashing the code, please see the instructions in  [Demo_Arduino_Motion](https://code.siemens.com/haoyu.ren/tinyml-research-symposium-2022-haoyu/-/tree/main/Demo_Arduino_Motion)
 
 ## Semantic Schema of Neural Network
-![961af19eb428337dd0bbbb3c5d5a9cf4.png](:/47c243a3d4ac4438b9a608fe191c0e66)
 
 ![Capture2.png](/_resources/Capture2.PNG)
 
