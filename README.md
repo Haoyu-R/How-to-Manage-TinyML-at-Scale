@@ -31,7 +31,7 @@ To be added
 * tflite2semantic_parser_xlsx.py: generate semantic representations of the NN models stored in the folder [collected_models](https://code.siemens.com/haoyu.ren/tinyml-research-symposium-2022-haoyu/-/tree/main/collected_models) against the [proposed semantic schema](## Semantic Schema of Neural Network) combining the information provided in `Models_Information.xlsx`
 * tflite2semantic_user_input.py: generate a semantic representation for each NN model against the [proposed semantic schema](## Semantic Schema of Neural Network) by asking the user a few input questions
 
-## Use
+## Usage
 
 Our project is runnable in a Linux environment, as the binary executable is built on a Linux environment. Alternatively, one can use our [google colab](https://colab.research.google.com/drive/1Cnpoqb92yiERrBMLDjCqxB9Yx7-9ufcu?usp=sharing) script to start the development.
 
