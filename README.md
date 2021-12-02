@@ -5,7 +5,7 @@ The future of machine learning (ML) is tiny and bright. Embedded ML has risen to
 For more information on the project, please see our paper
 [How to Manage TinyML Smartly]()
 
-![Capture1.png](/_resources/Capture1.PNG)
+![Capture1.png](/_resources/Capture1.png)
 
 ## Citation
 If our work has been useful for your research and you would like to cite it in an scientific publication, please cite [How to Manage TinyML Smartly]() as follows:
@@ -14,7 +14,6 @@ To be added
 ```
 
 ## Project Structure
-* [Demo_Arduino_Motion](https://code.siemens.com/haoyu.ren/tinyml-research-symposium-2022-haoyu/-/tree/main/Demo_Arduino_Motion): the Arduino implementation for loading and deploying TinyML models using BLE on the fly.
 * [collected_models](https://code.siemens.com/haoyu.ren/tinyml-research-symposium-2022-haoyu/-/tree/main/collected_models): the TinyML  (tflite) models that we collected
 * [estimate_tensor_arena_size](https://code.siemens.com/haoyu.ren/tinyml-research-symposium-2022-haoyu/-/tree/main/estimate_tensor_arena_size): the source file to estimate the RAM consumption given a tflite model
 * [model_repo](https://code.siemens.com/haoyu.ren/tinyml-research-symposium-2022-haoyu/-/tree/main/model_repo): a folder to stimulate a model repo for hosting the parsed tflite models
@@ -31,7 +30,7 @@ To be added
 * tflite2semantic_parser_xlsx.py: generate semantic representations of the NN models stored in the folder [collected_models](https://code.siemens.com/haoyu.ren/tinyml-research-symposium-2022-haoyu/-/tree/main/collected_models) against the [proposed semantic schema](## Semantic Schema of Neural Network) combining the information provided in `Models_Information.xlsx`
 * tflite2semantic_user_input.py: generate a semantic representation for each NN model against the [proposed semantic schema](## Semantic Schema of Neural Network) by asking the user a few input questions
 
-## Usage
+## Use
 
 Our project is runnable in a Linux environment, as the binary executable is built on a Linux environment. Alternatively, one can use our [google colab](https://colab.research.google.com/drive/1Cnpoqb92yiERrBMLDjCqxB9Yx7-9ufcu?usp=sharing) script to start the development.
 
@@ -52,16 +51,17 @@ Run  `tflite2semantic_user_input.py` to see how each model can be parsed into se
 
 To work with the semantic representations of neural networks and embedded devices, we recommend using [GraphDB free](https://graphdb.ontotext.com/). The scripts `rdflib_push.py`, `semantic_querying.py`, `sparql_queries.py` contain the code and example queries for interacting with GraphDB.
 
-To deploy the tflite micro model from a central device to an Arduino Nano 33 BLE Sense board using BLE and change the onboard model without reflashing the code, please see the instructions in  [Demo_Arduino_Motion](https://code.siemens.com/haoyu.ren/tinyml-research-symposium-2022-haoyu/-/tree/main/Demo_Arduino_Motion)
-
 ## Semantic Schema of Neural Network
 
-![Capture2.png](/_resources/Capture2.PNG)
+![Capture2.png](/_resources/Capture2.png)
 
 ## To do
 ```
 To be added
 ```
+
+## Related Project
+* [Demo_Arduino_Motion](https://code.siemens.com/haoyu.ren/tinyml-research-symposium-2022-haoyu/-/tree/main/Demo_Arduino_Motion): the Arduino implementation for loading and deploying tflite micro models from a central device to an Arduino Nano 33 BLE Sense board using BLE on the fly.
 
 ## Contributing to the project
 
