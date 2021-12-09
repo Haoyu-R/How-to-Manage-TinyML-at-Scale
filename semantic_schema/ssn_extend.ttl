@@ -12,11 +12,11 @@
 
 @prefix ssn_extend: <http://tinyml-schema.org/ssn_extend/> .
 
-:sensorInput
+:provideInput
   rdf:type owl:ObjectProperty ;
   rdfs:comment "Relation between a Sensor and a NeuralNetwork input."@en ;
-  rdfs:isDefinedBy ssn: ;
-  rdfs:label "sensor input data"@en ;
-  schema:domainIncludes ssn:input ;
-  schema:rangeIncludes sosa:Observation ;
+  rdfs:isDefinedBy ssn_extend: ;
+  rdfs:label "sensor input"@en ;
+  schema:domainIncludes sosa:Sensor ;
+  schema:rangeIncludes ssn:Input ;
 .
