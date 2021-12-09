@@ -1,13 +1,13 @@
-# baseURI: http://ureasoner.org/tinyml-demo
-# imports: http://ureasoner.org/networkschema
+# baseURI: http://tinyml-schema.org/tinyml-demo
+# imports: http://tinyml-schema.org/networkschema
 # imports: http://w3id.org/s3n/S3NCore
 # imports: http://w3id.org/s3n/S3NProcedure
 # imports: http://w3id.org/s3n/S3NThing
 # imports: http://www.ontology-of-units-of-measure.org/resource/om-2/
 # imports: http://w3id.org/s3n/
 
-@prefix : <http://ureasoner.org/tinyml-demo#> .
-@prefix nnet: <http://ureasoner.org/networkschema#> .
+@prefix : <http://tinyml-schema.org/tinyml-demo#> .
+@prefix nnet: <http://tinyml-schema.org/networkschema#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -18,10 +18,12 @@
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix s3n_extend: <http://tinyml-schema.org/s3n_extend/> .
+@prefix sosa_extend: <http://tinyml-schema.org/sosa_extend/> .
 
-<http://ureasoner.org/tinyml-demo>
+<http://tinyml-schema.org/tinyml-demo>
   rdf:type owl:Ontology ;
-  owl:imports <http://ureasoner.org/networkschema> ;
+  owl:imports <http://tinyml-schema.org/networkschema> ;
   owl:imports <http://w3id.org/s3n/S3NCore> ;
   owl:imports <http://w3id.org/s3n/S3NProcedure> ;
   owl:imports <http://w3id.org/s3n/S3NThing> ;
@@ -29,6 +31,54 @@
   owl:imports s3n: ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
+
+
+# Hardware information for the NN
+:hasHardwareReference
+  rdf:type rdf:Property ;
+  schema:domainIncludes :NeuralNetwork ;
+  schema:rangeIncludes :Hardware ;
+  rdfs:comment "One can specify the type of the hardware which is used to collect data for NN training." ;
+  rdfs:label "hasHardwareReference" ;
+.
+:Hardware
+  rdf:type owl:Class ;
+  rdfs:comment "Hardware." ;
+  rdfs:label "Hardware" ;
+  rdfs:subClassOf schema:Enumeration ;
+  rdfs:subClassOf rdfs:Class ;
+.
+:hasHardwareInfo rdf:type rdf:Property ;
+           schema:domainIncludes :Hardware ;
+           schema:rangeIncludes schema:Text ;
+           rdfs:comment "Provide extra information about the hardware such as model and setting." ;
+           rdfs:label "hasHardwareInfo" .
+:Camera
+  rdf:type :Hardware ;
+  rdfs:comment "The information of the camera." ;
+  rdfs:label "Camera" ;
+.
+:Microphone
+  rdf:type :Hardware ;
+  rdfs:comment "The information of the microphone." ;
+  rdfs:label "Microphone" ;
+.
+:Accelerometer
+  rdf:type :Hardware ;
+  rdfs:comment "The information of the accelerometer." ;
+  rdfs:label "Accelerometer" ;
+.
+:Gyroscope
+  rdf:type :Hardware ;
+  rdfs:comment "The information of the gyroscope." ;
+  rdfs:label "Gyroscope" ;
+.
+:Thermometer 
+  rdf:type :Hardware ;
+  rdfs:comment "The information of the thermometer." ;
+  rdfs:label "Thermometer" ;
+.
+
 
 # Sensor
 :Thermometer
@@ -116,12 +166,12 @@
 .
 
 # Memory
-:RAM
+s3n_extend:RAM
   rdf:type owl:Class ;
   rdfs:label "RAM" ;
   rdfs:subClassOf s3n:Memory ;
 .
-:Flash
+s3n_extend:Flash
   rdf:type owl:Class ;
   rdfs:label "Flash" ;
   rdfs:subClassOf s3n:Memory ;

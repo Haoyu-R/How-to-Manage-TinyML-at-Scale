@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix schema: <https://schema.org/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix td: <http://www.w3.org/ns/td#> .
+@prefix s3n: <http://w3id.org/s3n/> .
+
+
+foaf:Agent a owl:Class .
+foaf:name a owl:AnnotationProperty .
+voaf:Vocabulary a owl:Class .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:rights a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+dcterms:created a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+skos:definition a owl:AnnotationProperty .
+skos:example a owl:AnnotationProperty .
+skos:note a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+schema:domainIncludes a owl:AnnotationProperty .
+schema:rangeIncludes a owl:AnnotationProperty .
+time:TemporalEntity a owl:Class .
+
+
+s3n:S3NThing a owl:Ontology , voaf:Vocabulary ;
+  dcterms:title "Semantic Smart Sensor Network (S3N) Ontology: Thing Module"@en ;
+  dcterms:description "This ontology extends the S3N-Core Ontology and the TD ontology. It defines alignment between SSN and TD, and defines SmartSensors as Things."@en ;
+  dcterms:creator <http://maxime-lefrancois.info/me#> ;
+  dcterms:creator [ a foaf:Agent ; foaf:name "Samya Sagar"@en ] ;
+  dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+  dcterms:created "2018-01-11"^^xsd:date ;
+  owl:imports s3n:S3NCore , td: ;
+  vann:preferredNamespacePrefix "s3n" ;
+  vann:preferredNamespaceUri "http://w3id.org/s3n/" .
+
+<http://maxime-lefrancois.info/me#> a foaf:Agent ; foaf:name "Maxime Lefrançois"@en .
+
+
+# Alignment between SSN and TD
+
+td:Thing rdfs:subClassOf ssn:System .
+td:interaction rdfs:subPropertyOf ssn:implements .
+td:InteractionPattern rdfs:subClassOf sosa:Procedure .
+td:inputData  rdfs:subPropertyOf ssn:hasInput .
+td:outputData  rdfs:subPropertyOf ssn:hasOutput .
+
+# Alignment between S3N-core and TD
+
+s3n:SmartSensor rdfs:subClassOf td:Thing .

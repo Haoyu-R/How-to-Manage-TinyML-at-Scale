@@ -1,6 +1,6 @@
-# baseURI: http://ureasoner.org/tiny-demo/syntiant_tinyml-322-000-000-004
+# baseURI: http://tinyml-schema.org/tiny-demo/syntiant_tinyml-322-000-000-004
 
-@prefix demo: <http://ureasoner.org/tinyml-demo#> .
+@prefix demo: <http://tinyml-schema.org/tinyml-demo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,7 +12,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 
-<http://ureasoner.org/tinyml-demo/syntiant_tinyml-322-000-000-004>
+<http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004>
   rdf:type s3n:SmartSensor ;
   ssn:hasSubSystem [
       rdf:type demo:Accelerometer ;
@@ -45,7 +45,7 @@
   td:hasPropertyAffordance [
       td:description "Acceleration data."@en ;
       td:hasForm [
-          td:href "http://ureasoner.org/tinyml-demo/syntiant_tinyml-322-000-000-004/acceleration"@en ;
+          td:href "http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004/acceleration"@en ;
           td:op "observeproperty"@en ;
           td:op "readproperty"@en ;
         ] ;
@@ -60,7 +60,7 @@
   td:hasPropertyAffordance [
 	  td:description "Orientation data."@en ;
 	  td:hasForm [
-		  td:href "http://ureasoner.org/tinyml-demo/syntiant_tinyml-322-000-000-004/orientation"@en ;
+		  td:href "http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004/orientation"@en ;
 		  td:op "observeproperty"@en ;
 		  td:op "readproperty"@en ;
 		] ;
@@ -75,7 +75,7 @@
   td:hasPropertyAffordance [
 	  td:description "Sound."@en ;
 	  td:hasForm [
-		  td:href "http://ureasoner.org/tinyml-demo/syntiant_tinyml-322-000-000-004/sound"@en ;
+		  td:href "http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004/sound"@en ;
 		  td:op "observeproperty"@en ;
 		  td:op "readproperty"@en ;
 		] ;

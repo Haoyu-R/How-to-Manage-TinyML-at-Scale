@@ -1,0 +1,50 @@
+# baseURI: http://tinyml-schema.org/sosa_extend/
+
+@prefix : <http://tinyml-schema.org/sosa_extend/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s3n: <http://w3id.org/s3n/> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix sosa_extend: <http://tinyml-schema.org/sosa_extend/> .
+
+:Accelerometer
+  rdf:type owl:Class ;
+  rdfs:label "Accelerometer" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:Camera
+  rdf:type owl:Class ;
+  rdfs:label "Camera" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:Gyroscope
+  rdf:type owl:Class ;
+  rdfs:label "Gyroscopes" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:Magnetometer
+  rdf:type owl:Class ;
+  rdfs:label "Magnetometer" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:Microphone
+  rdf:type owl:Class ;
+  rdfs:label "Microphone" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:Thermometer
+  rdf:type owl:Class ;
+  rdfs:label "Thermometer" ;
+  rdfs:subClassOf sosa:Sensor ;
+.
+:hasSensorInfo
+  rdf:type rdf:Property ;
+  rdfs:comment "Provide extra information about the sensor such as model and setting." ;
+  rdfs:label "hasSensorInfo" ;
+  schema:domainIncludes sosa:Sensor ;
+  schema:rangeIncludes schema:Text ;
+.

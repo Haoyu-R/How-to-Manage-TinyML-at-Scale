@@ -1,0 +1,22 @@
+# baseURI: http://tinyml-schema.org/ssn_extend/
+
+@prefix : <http://tinyml-schema.org/ssn_extend/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s3n: <http://w3id.org/s3n/> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ssn_extend: <http://tinyml-schema.org/ssn_extend/> .
+
+:sensorInput
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Relation between a Sensor and a NeuralNetwork input."@en ;
+  rdfs:isDefinedBy ssn: ;
+  rdfs:label "sensor input data"@en ;
+  schema:domainIncludes ssn:input ;
+  schema:rangeIncludes sosa:Observation ;
+.

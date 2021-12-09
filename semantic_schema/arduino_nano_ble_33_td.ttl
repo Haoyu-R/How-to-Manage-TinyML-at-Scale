@@ -1,6 +1,6 @@
-# baseURI: http://ureasoner.org/tiny-demo/arduino_nano_ble_33-322-000-000-002
+# baseURI: http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002
 
-@prefix demo: <http://ureasoner.org/tinyml-demo#> .
+@prefix demo: <http://tinyml-schema.org/tinyml-demo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,7 +12,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 
-<http://ureasoner.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002>
+<http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002>
   rdf:type s3n:SmartSensor ;
   ssn:hasSubSystem [
       rdf:type demo:Thermometer ;
@@ -51,7 +51,7 @@
   td:hasPropertyAffordance [
       td:description "Temperature data."@en ;
       td:hasForm [
-          td:href "http://ureasoner.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/temperature"@en ;
+          td:href "http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/temperature"@en ;
           td:op "observeproperty"@en ;
           td:op "readproperty"@en ;
         ] ;
@@ -66,7 +66,7 @@
   td:hasPropertyAffordance [
       td:description "Acceleration data."@en ;
       td:hasForm [
-          td:href "http://ureasoner.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/acceleration"@en ;
+          td:href "http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/acceleration"@en ;
           td:op "observeproperty"@en ;
           td:op "readproperty"@en ;
         ] ;
@@ -81,7 +81,7 @@
   td:hasPropertyAffordance [
 	  td:description "Orientation data."@en ;
 	  td:hasForm [
-		  td:href "http://ureasoner.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/orientation"@en ;
+		  td:href "http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/orientation"@en ;
 		  td:op "observeproperty"@en ;
 		  td:op "readproperty"@en ;
 		] ;
@@ -96,7 +96,7 @@
   td:hasPropertyAffordance [
 	  td:description "Magnetic Field data."@en ;
 	  td:hasForm [
-		  td:href "http://ureasoner.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/magneticField"@en ;
+		  td:href "http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/magneticField"@en ;
 		  td:op "observeproperty"@en ;
 		  td:op "readproperty"@en ;
 		] ;
@@ -111,7 +111,7 @@
   td:hasPropertyAffordance [
 	  td:description "Sound."@en ;
 	  td:hasForm [
-		  td:href "http://ureasoner.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/sound"@en ;
+		  td:href "http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/sound"@en ;
 		  td:op "observeproperty"@en ;
 		  td:op "readproperty"@en ;
 		] ;
