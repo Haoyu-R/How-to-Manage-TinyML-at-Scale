@@ -419,7 +419,7 @@ if __name__ == "__main__":
     test_model_dir = os.path.join(cur_dir, original)
     model_repo_dir = os.path.join(cur_dir, destination)
     print(test_model_dir)
-    workbook = pd.read_excel(os.path.join(cur_dir, "models_information.xlsx"), sheet_name=0)
+    workbook = pd.read_excel(os.path.join(cur_dir, "Models_Information.xlsx"), sheet_name=0)
 
     headers = [col for col in workbook.columns]
     model_count = 0
