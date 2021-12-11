@@ -1,6 +1,5 @@
-# baseURI: http://tinyml-schema.org/tiny-demo/syntiant_tinyml-322-000-000-004
+# baseURI: http://tinyml-schema.org/tiny-demo/adafruit_pybadge-322-000-000-005
 
-@prefix demo: <http://tinyml-schema.org/tinyml-demo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,40 +11,37 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 
-<http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004>
+@prefix s3n_extend: <http://tinyml-schema.org/s3n_extend/> .
+@prefix sosa_extend: <http://tinyml-schema.org/sosa_extend/> .
+
+<http://tinyml-schema.org/tinyml-demo/adafruit_pybadge-322-000-000-005>
   rdf:type s3n:SmartSensor ;
   ssn:hasSubSystem [
-      rdf:type demo:Accelerometer ;
+      rdf:type sosa_extend:Accelerometer ;
     ] ;
-  ssn:hasSubSystem [
-      rdf:type demo:Gyroscope ;
-	] ;
-  ssn:hasSubSystem [
-	  rdf:type demo:Microphone ;
-	] ; 
   ssn:hasSubSystem [
       rdf:type s3n:MicroController ;
       s3n:hasSystemCapability [
           ssn-system:hasSystemProperty [
-              rdf:type demo:Flash ;
+              rdf:type s3n_extend:Flash ;
               schema:unitCode om:kilobyte ;
-              schema:value 2048 ;
+              schema:value 385 ;
 			  rdfs:comment "Flash."@en ;
             ] ;
 		  ssn-system:hasSystemProperty [
-		      rdf:type demo:RAM ;
+		      rdf:type s3n_extend:RAM ;
 		      schema:unitCode om:kilobyte ;
-		      schema:value 32 ;
+		      schema:value 109 ;
 			  rdfs:comment "RAM."@en ;
 		    ] ;
         ] ;
-      rdfs:comment "Syntiant TinyML Board."@en ;
+      rdfs:comment "Adafruit Pybadge."@en ;
     ] ;
   td:description "Syntiant TinyML Board"@en ;
   td:hasPropertyAffordance [
       td:description "Acceleration data."@en ;
       td:hasForm [
-          td:href "http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004/acceleration"@en ;
+          td:href "http://tinyml-schema.org/tinyml-demo/adafruit_pybadge-322-000-000-005/acceleration"@en ;
           td:op "observeproperty"@en ;
           td:op "readproperty"@en ;
         ] ;
@@ -57,33 +53,6 @@
       td:type "number"@en ;
       td:unit "om:gravity"@en ;
     ] ;
-  td:hasPropertyAffordance [
-	  td:description "Orientation data."@en ;
-	  td:hasForm [
-		  td:href "http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004/orientation"@en ;
-		  td:op "observeproperty"@en ;
-		  td:op "readproperty"@en ;
-		] ;
-	  td:isObservable "true"^^xsd:boolean ;
-	  td:maximum 2000 ;
-      td:minimum -2000 ;
-	  td:readOnly "true"^^xsd:boolean ;
-	  td:title "Orientation"@en ;
-	  td:type "number"@en ;
-	  td:unit "om:degress_per_second"@en ;
-	] ;
-  td:hasPropertyAffordance [
-	  td:description "Sound."@en ;
-	  td:hasForm [
-		  td:href "http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004/sound"@en ;
-		  td:op "observeproperty"@en ;
-		  td:op "readproperty"@en ;
-		] ;
-	  td:isObservable "true"^^xsd:boolean ;
-	  td:readOnly "true"^^xsd:boolean ;
-	  td:title "sound"@en ;
-	  td:type "number"@en ;
-	] ;
   td:hasSecurityConfiguration td:nosec_sc ;
   td:securityDefinitions [
       td:scheme "nosec"@en ;

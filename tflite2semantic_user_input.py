@@ -156,9 +156,10 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
     g.add((procedureFeature_2, RDF.type, s3n.ProcedureFeature))
     g.add((procedureFeature_2, RDFS.label, Literal("procedureFeature_2")))
     g.add((procedureFeature_2, ssn_system.inCondition, condition_2))
-    print(path_)
-    print(os.popen("./find-arena-size {}".format(path_)).read())
+    # print(path_)
+    # print(os.popen("./find-arena-size {}".format(path_)).read())
     tensorSize = int(os.popen("./find-arena-size {}".format(path_)).read())
+    # tensorSize = 222
     g.add((condition_2, SDO.minValue, Literal(tensorSize / 1000)))
     g.add((neuralNetwork, s3n.hasProcedureFeature, procedureFeature_2))
 
@@ -219,9 +220,16 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
                     4: tflite.DepthwiseConv2DOptions(),
                     6: tflite.DequantizeOptions(),
                     9: tflite.FullyConnectedOptions(),
+                    18: tflite.MulOptions(),
                     22: tflite.ReshapeOptions(),
                     25: tflite.SoftmaxOptions(),
+                    34: tflite.PadOptions(),
+                    41: tflite.SubOptions(),
+                    49: tflite.SplitOptions(),
+                    83: tflite.PackOptions(),
+                    88: tflite.UnpackOptions(),
                     97: tflite.ResizeNearestNeighborOptions(),
+                    102: tflite.SplitVOptions(),
                     114: tflite.QuantizeOptions(),
                 }
                 if code in CODE2OPTION:
@@ -285,10 +293,19 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
                     9: nnet.fullyConnected,
                     14: nnet.logistic,
                     17: nnet.maxPool2D,
+                    18: nnet.mul,
                     22: nnet.reshape,
                     25: nnet.softmax,
+                    28: nnet.tanh,
+                    34: nnet.pad,
                     40: nnet.mean,
+                    41: nnet.sub,
+                    49: nnet.split_,
+                    83: nnet.pack,
+                    80: nnet.fake_quant,
+                    88: nnet.unpack,
                     97: nnet.resizeNearestNeighbor,
+                    102: nnet.split_v,
                     114: nnet.quantize,
                 }
                 if code in CODE2LAYER:

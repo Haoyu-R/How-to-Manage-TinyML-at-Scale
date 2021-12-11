@@ -1,6 +1,5 @@
 # baseURI: http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33_tinyml_kit-322-000-000-003
 
-@prefix demo: <http://tinyml-schema.org/tinyml-demo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,43 +11,46 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 
+@prefix s3n_extend: <http://tinyml-schema.org/s3n_extend/> .
+@prefix sosa_extend: <http://tinyml-schema.org/sosa_extend/> .
+
 <http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33_tinyml_kit-322-000-000-003>
   rdf:type s3n:SmartSensor ;
   ssn:hasSubSystem [
-      rdf:type demo:Thermometer ;
+      rdf:type sosa_extend:Thermometer ;
     ] ;
   ssn:hasSubSystem [
-      rdf:type demo:Accelerometer ;
+      rdf:type sosa_extend:Accelerometer ;
     ] ;
   ssn:hasSubSystem [
-      rdf:type demo:Gyroscope ;
+      rdf:type sosa_extend:Gyroscope ;
 	] ;
   ssn:hasSubSystem [
-      rdf:type demo:Magnetometer ;
+      rdf:type sosa_extend:Magnetometer ;
 	] ; 
   ssn:hasSubSystem [
-	  rdf:type demo:Microphone ;
+	  rdf:type sosa_extend:Microphone ;
 	] ; 
   ssn:hasSubSystem [
-      rdf:type demo:Camera ;
+      rdf:type sosa_extend:Camera ;
 	] ;
   ssn:hasSubSystem [
       rdf:type s3n:MicroController ;
       s3n:hasSystemCapability [
           ssn-system:hasSystemProperty [
-              rdf:type demo:Flash ;
+              rdf:type s3n_extend:Flash ;
               schema:unitCode om:kilobyte ;
-              schema:value 1024 ;
+              schema:value 785 ;
 			  rdfs:comment "Flash."@en ;
             ] ;
 		  ssn-system:hasSystemProperty [
-		      rdf:type demo:RAM ;
+		      rdf:type s3n_extend:RAM ;
 		      schema:unitCode om:kilobyte ;
-		      schema:value 256 ;
+		      schema:value 187 ;
 			  rdfs:comment "RAM."@en ;
 		    ] ;
         ] ;
-      rdfs:comment "Arduino Nano BLE 33."@en ;
+      rdfs:comment "Arduino Nano BLE 33 TinyML Kit."@en ;
     ] ;
   td:description "Arduino Nano BLE 33 Micro Controller"@en ;
   td:hasPropertyAffordance [

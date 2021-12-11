@@ -12,21 +12,23 @@ import tensorflow as tf
 import pandas as pd
 import os
 
-# Reference: https://github.com/edgeimpulse/tflite-find-arena-size
+# Schema reference: https://github.com/tensorflow/tensorflow/blob/v2.4.0/tensorflow/lite/schema/schema.fbs/#L344
+# Tensor arena size reference: https://github.com/edgeimpulse/tflite-find-arena-size
 cmd = "./find-arena-size Hello_World.tflite"
 
-# Schema Reference: https://github.com/tensorflow/tensorflow/blob/v2.4.0/tensorflow/lite/schema/schema.fbs/#L344
-
-# Create namespace for not-supported namespace by rdflib
+# Create namespace for none-supported namespace by rdflib
 SOSA = Namespace("http://www.w3.org/ns/sosa/")
 SSN = Namespace("http://www.w3.org/ns/ssn/")
-nnet = Namespace("http://ureasoner.org/networkschema#")
+nnet = Namespace("http://tinyml-schema.org/networkschema#")
 s3n = Namespace("http://w3id.org/s3n/")
 ssn_system = Namespace("http://www.w3.org/ns/ssn/systems/")
-demo = Namespace("http://ureasoner.org/tinyml-demo#")
+ssn_extend = Namespace("http://tinyml-schema.org/ssn_extend/")
+sosa_extend = Namespace("http://tinyml-schema.org/sosa_extend/")
+s3n_extend = Namespace("http://tinyml-schema.org/s3n_extend/")
 
 # Create a Graph
 g = Graph()
+
 # Name binding
 nm = g.namespace_manager
 nm.bind("sosa", SOSA)
@@ -34,13 +36,12 @@ nm.bind("nnet", nnet)
 nm.bind("schema", SDO)
 nm.bind("s3n", s3n)
 nm.bind("ssn", SSN)
-nm.bind("ssn-system", ssn_system)
-nm.bind("demo", demo)
+nm.bind("ssn_extend", ssn_extend)
+nm.bind("sosa_extend", sosa_extend)
+nm.bind("s3n_extend", s3n_extend)
 
-
-
-def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, metric_value_, dataset_, date_, creator_,
-                        location_, reference_, description_, category_, input_comment_, output_comment_):
+def tflite2semantic(path_, nameOfNN_, sensor_list_, sensor_info_, metrics_, metric_value_, dataset_, date_, creator_,
+                        location_, reference_, description_, category_, input_comment_, output_comment_, runtime_):
     with open(path_, "rb") as f:
         buf = f.read()
         model = tflite.Model.GetRootAsModel(buf, 0)
@@ -49,7 +50,7 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
     interpreter.allocate_tensors()
 
     idOfNN = str(uuid.uuid4())
-    # Copy the model to the destination and rename it with uuid
+    # Copy the model to the destination repo and rename it with uuid
     base, extension = os.path.splitext(path_)
     # Regenerate a uuid if an existing model has the same uuid
     while True:
@@ -60,52 +61,55 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
         idOfNN = str(uuid.uuid4())
 
     # ----------- semantic handling 1 -----------
-    neuralNetwork = URIRef("http://example.org/neuralnetwork/" + idOfNN)
+    neuralNetwork = URIRef("http://tinyml-schema.org/neuralnetwork/" + idOfNN)
 
-    inputOfNN = URIRef("http://example.org/neuralnetwork/input_" + idOfNN)
-    outputOfNN = URIRef("http://example.org/neuralnetwork/output_" + idOfNN)
-    metricOfNN = URIRef("http://example.org/neuralnetwork/metric_1_" + idOfNN)
-    procedureFeature_1 = URIRef("http://example.org/neuralnetwork/procedureFeature_1_" + idOfNN)
-    condition_1 = URIRef("http://example.org/neuralnetwork/condition_1_" + idOfNN)
-    procedureFeature_2 = URIRef("http://example.org/neuralnetwork/procedureFeature_2_" + idOfNN)
-    condition_2 = URIRef("http://example.org/neuralnetwork/condition_2_" + idOfNN)
+    inputOfNN = URIRef("http://tinyml-schema.org/neuralnetwork/input_" + idOfNN)
+    outputOfNN = URIRef("http://tinyml-schema.org/neuralnetwork/output_" + idOfNN)
+    metricOfNN = URIRef("http://tinyml-schema.org/neuralnetwork/metric_1_" + idOfNN)
+    procedureFeature_1 = URIRef("http://tinyml-schema.org/neuralnetwork/procedureFeature_1_" + idOfNN)
+    condition_1 = URIRef("http://tinyml-schema.org/neuralnetwork/condition_1_" + idOfNN)
+    procedureFeature_2 = URIRef("http://tinyml-schema.org/neuralnetwork//procedureFeature_2_" + idOfNN)
+    condition_2 = URIRef("http://tinyml-schema.org/neuralnetwork/condition_2_" + idOfNN)
 
-    # NN model data properties
+    # NN model metadata
     g.add((neuralNetwork, RDF.type, nnet.NeuralNetwork))
-    g.add((neuralNetwork, nnet.location, URIRef(location_)))
-    g.add((neuralNetwork, nnet.dataset, URIRef(dataset_)))
-    g.add((neuralNetwork, nnet.hasTitle, Literal(nameOfNN_)))
-    g.add((neuralNetwork, nnet.hasID, Literal(idOfNN)))
-    g.add((neuralNetwork, nnet.reference, URIRef(reference_)))
-    g.add((neuralNetwork, nnet.created, Literal(date_)))
-    g.add((neuralNetwork, nnet.creator, Literal(creator_)))
-    g.add((neuralNetwork, nnet.hasDescription, Literal(description_)))
+    g.add((neuralNetwork, nnet.trainingDataset, URIRef(dataset_)))
+    g.add((neuralNetwork, SDO.name, Literal(nameOfNN_)))
+    g.add((neuralNetwork, SDO.identifier, Literal(idOfNN)))
+    g.add((neuralNetwork, SDO.citation, URIRef(reference_)))
+    g.add((neuralNetwork, SDO.dateCreated, Literal(date_)))
+    g.add((neuralNetwork, SDO.creator, Literal(creator_)))
+    g.add((neuralNetwork, SDO.description, Literal(description_)))
+    g.add((neuralNetwork, SDO.runtimePlatform, Literal(runtime_)))
+    g.add((neuralNetwork, SDO.codeRepository, URIRef(location_)))
+    # Tensorflot lite model has only one subgraph
     graph = model.Subgraphs(0)
+    # Calculate MACs
     total_mac = calc_mac(graph, model)
     g.add((neuralNetwork, nnet.hasMultiplyAccumulateOps, Literal(total_mac)))
 
-    # Object property: hardware
+    # Add sensor information
     def addHardware(code):
         # add hardware information to NN
         # only a few common sensors are implemented
         CODE2HARDWARE = {
-            0: nnet.Camera,
-            1: nnet.Microphone,
-            2: nnet.Accelerometer,
-            3: nnet.Gyroscope,
-            4: nnet.Thermometer,
-            5: nnet.OtherSensor,
+            0: sosa_extend.Camera,
+            1: sosa_extend.Microphone,
+            2: sosa_extend.Accelerometer,
+            3: sosa_extend.Gyroscope,
+            4: sosa_extend.Thermometer,
+            5: sosa_extend.OtherSensor,
         }
         return CODE2HARDWARE[code]
 
-    for i, value in enumerate(hardware_list_):
-        hardwareOfNN = URIRef("http://example.org/neuralnetwork/hardware" + "_" + "{}".format(i + 1) + "_" + idOfNN)
-        g.add((hardwareOfNN, RDF.type, addHardware(value)))
-        g.add((hardwareOfNN, RDF.type, nnet.Hardware))
-        g.add((hardwareOfNN, nnet.hasHardwareInfo, Literal(hardware_info_)))
-        g.add((neuralNetwork, nnet.hasHardwareReference, hardwareOfNN))
+    for i, value in enumerate(sensor_list_):
+        sensorOfNN = URIRef("http://tinyml-schema.org/neuralnetwork/sensor" + "_" + "{}".format(i + 1) + "_" + idOfNN)
+        g.add((sensorOfNN, RDF.type, addHardware(value)))
+        g.add((sensorOfNN, RDF.type, SDO.Sensor))
+        g.add((sensorOfNN, sosa_extend.hasSensorInfo, Literal(sensor_info_)))
+        g.add((sensorOfNN, ssn_extend.provideInput, inputOfNN))
 
-    # Object property: input and output of NN
+    # Add input and output information of NN
     g.add((neuralNetwork, SSN.hasInput, inputOfNN))
     g.add((inputOfNN, RDF.type, nnet.NetworkInput))
     g.add((inputOfNN, nnet.hasInputInfo, Literal(input_comment_)))
@@ -114,14 +118,14 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
     g.add((outputOfNN, RDF.type, nnet.NetworkOutput))
     g.add((outputOfNN,nnet.hasOutputInfo, Literal(output_comment_)))
 
-    # Object property: Metric of NN
+    # Add metric of NN
     def addMetric(code):
         # add metric information to NN
         # only a few common metrics are implemented
         CODE2METRIC = {
-            0: nnet.top_1_accuracy,
-            1: nnet.top_5_accuracy,
-            2: nnet.other_metric,
+            0: nnet.Top_1_accuracy,
+            1: nnet.Top_5_accuracy,
+            2: nnet.Other_metric,
         }
         g.add((metricOfNN, RDF.type, CODE2METRIC[code]))
     addMetric(metrics_)
@@ -129,7 +133,7 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
     g.add((metricOfNN, RDF.type, nnet.Metric))
     g.add((neuralNetwork, nnet.hasMetric, metricOfNN))
 
-    # Object property: category of NN
+    # Add category of NN
     def addCategory(code):
         # add metric information to NN
         # only a few common metrics are implemented
@@ -143,9 +147,9 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
         g.add((neuralNetwork, nnet.hasCategory, CODE2CATEGORY[code]))
     addCategory(category_)
 
-    # Object property: Flash requirement of NN.
+    # Add flash requirement of NN.
     g.add((condition_1, RDF.type, s3n.Memory))
-    g.add((condition_1, RDF.type, demo.Flash))
+    g.add((condition_1, RDF.type, s3n_extend.Flash))
     g.add((condition_1, SDO.unitCode, Literal("om.kilobyte")))
     g.add((condition_1, RDFS.label, Literal("Flash requirement.")))
     g.add((procedureFeature_1, RDF.type, s3n.ProcedureFeature))
@@ -154,19 +158,19 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
     size = os.path.getsize(path_)
     g.add((condition_1, SDO.minValue, Literal(size / 1000)))
     g.add((neuralNetwork, s3n.hasProcedureFeature, procedureFeature_1))
-    # # Object property: Ram requirement of NN.
+    # Add RAM requirement of NN.
     g.add((condition_2, RDF.type, s3n.Memory))
-    g.add((condition_2, RDF.type, demo.RAM))
+    g.add((condition_2, RDF.type, s3n_extend.RAM))
     g.add((condition_2, SDO.unitCode, Literal("om.kilobyte")))
-    g.add((condition_2, RDFS.label, Literal("Ram requirement.")))
+    g.add((condition_2, RDFS.label, Literal("RAM requirement.")))
     g.add((procedureFeature_2, RDF.type, s3n.ProcedureFeature))
     g.add((procedureFeature_2, RDFS.label, Literal("procedureFeature_2")))
     g.add((procedureFeature_2, ssn_system.inCondition, condition_2))
     # print(os.popen("./find-arena-size {}".format("collected_models/Hello_World.tflite")).read())
-    print(path_)
-    print(os.popen("./find-arena-size {}".format(path_)).read())
-    tensorSize = int(os.popen("./find-arena-size {}".format(path_)).read())
-    # tensorSize = 222
+    # print(path_)
+    # print(os.popen("./find-arena-size {}".format(path_)).read())
+    # tensorSize = int(os.popen("./find-arena-size {}".format(path_)).read())
+    tensorSize = 222
     g.add((condition_2, SDO.minValue, Literal(tensorSize / 1000)))
     g.add((neuralNetwork, s3n.hasProcedureFeature, procedureFeature_2))
 
@@ -184,7 +188,8 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
     # How many tensor buffer.
     print("Tensor buffer number: {}".format(model.BuffersLength()))
 
-    # Select a subgraph
+    # Start processing layer-specific information
+    # Select a subgraph, tflite model has only one subgraph
     for i in range(model.SubgraphsLength()):
 
         print("###################################### Subgraph {} ######################################".format(i + 1))
@@ -203,7 +208,6 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
         # For each operator node:
         for j in range(graph.OperatorsLength()):
             print("############################## Operator {} ##############################".format(j + 1))
-
             op = graph.Operators(j)
             # Operator Type is also stored as index, which can obtain from `Model` object.
             print("The {} th operator is: {}".format(j + 1, tflite.opcode2name(
@@ -227,9 +231,16 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
                     4: tflite.DepthwiseConv2DOptions(),
                     6: tflite.DequantizeOptions(),
                     9: tflite.FullyConnectedOptions(),
+                    18: tflite.MulOptions(),
                     22: tflite.ReshapeOptions(),
                     25: tflite.SoftmaxOptions(),
+                    34: tflite.PadOptions(),
+                    41: tflite.SubOptions(),
+                    49: tflite.SplitOptions(),
+                    83: tflite.PackOptions(),
+                    88: tflite.UnpackOptions(),
                     97: tflite.ResizeNearestNeighborOptions(),
+                    102: tflite.SplitVOptions(),
                     114: tflite.QuantizeOptions(),
                 }
                 if code in CODE2OPTION:
@@ -248,6 +259,7 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
 
             if (op_opt is not None) and opt:
                 opt.Init(op_opt.Bytes, op_opt.Pos)
+                # Reshape and Softmax operator has to be handled differently
                 if model.OperatorCodes(op.OpcodeIndex()).BuiltinCode() in [tflite.BuiltinOperator.RESHAPE, tflite.BuiltinOperator.SOFTMAX]:
                     print("Activation function: {}".format(activationcode2name(0)))
                 else:
@@ -271,7 +283,7 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
                     # print("input dimension: {}".format(tensor.ShapeAsNumpy()))
                     # print("buffer length: {}".format(buf.DataLength()))
 
-                    # Check if a layer is quantized: if it is not quantized, it should be type of int
+                    # Check if a layer is quantized: if it is not quantized, the variable should be type of int
                     if isinstance(tensor.Quantization().ScaleAsNumpy(), np.ndarray):
                         print("Quantized layer: Yes")
                     else:
@@ -284,20 +296,29 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
                 # add layer type information to each layer
                 # only a few common operators are implemented
                 CODE2LAYER = {
-                    0: nnet.add,
-                    1: nnet.avgPool2D,
-                    2: nnet.concatenation,
-                    3: nnet.conv2D,
-                    4: nnet.depthwiseConv2D,
-                    6: nnet.dequantize,
-                    9: nnet.fullyConnected,
-                    14: nnet.logistic,
-                    17: nnet.maxPool2D,
-                    22: nnet.reshape,
-                    25: nnet.softmax,
-                    40: nnet.mean,
-                    97: nnet.resizeNearestNeighbor,
-                    114: nnet.quantize,
+                    0: nnet.Add,
+                    1: nnet.AvgPool2D,
+                    2: nnet.Concatenation,
+                    3: nnet.Conv2D,
+                    4: nnet.DepthwiseConv2D,
+                    6: nnet.Dequantize,
+                    9: nnet.FullyConnected,
+                    14: nnet.Logistic,
+                    17: nnet.MaxPool2D,
+                    18: nnet.Mul,
+                    22: nnet.Reshape,
+                    25: nnet.Softmax,
+                    28: nnet.Tanh,
+                    34: nnet.Pad,
+                    40: nnet.Mean,
+                    41: nnet.Sub,
+                    49: nnet.Split_,
+                    83: nnet.Pack,
+                    80: nnet.FakeQuant,
+                    88: nnet.Unpack,
+                    97: nnet.ResizeNearestNeighbor,
+                    102: nnet.SplitV,
+                    114: nnet.Quantize,
                 }
                 if code in CODE2LAYER:
                     g.add((layer, nnet.hasType, CODE2LAYER[code]))
@@ -307,18 +328,18 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
             def addQuantization(code):
                 # Reference: https://github.com/tensorflow/tensorflow/blob/v2.1.0/tensorflow/lite/schema/schema.fbs/#L32
                 CODE2DATATYPE = {
-                    0: nnet.float32,
-                    1: nnet.float16,
-                    2: nnet.int32,
-                    3: nnet.uint8,
-                    4: nnet.int64,
-                    5: nnet.string,
-                    6: nnet.bool,
-                    7: nnet.int16,
-                    8: nnet.complex64,
-                    9: nnet.int8,
-                    10: nnet.float64,
-                    11: nnet.complex128,
+                    0: nnet.Float32,
+                    1: nnet.Float16,
+                    2: nnet.Int32,
+                    3: nnet.Uint8,
+                    4: nnet.Int64,
+                    5: nnet.String,
+                    6: nnet.Bool,
+                    7: nnet.Int16,
+                    8: nnet.Complex64,
+                    9: nnet.Int8,
+                    10: nnet.Float64,
+                    11: nnet.Complex128,
                 }
                 if code in CODE2DATATYPE:
                     return CODE2DATATYPE[code]
@@ -326,11 +347,11 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
                     raise ValueError("Unknown datatype code %d, might be a custom operator." % code)
 
             def addTrainable(layer, quantization_flag):
-                # add quantization and trainable information to the each layer
-                if quantization_flag:
-                    g.add((layer, nnet.isTrainable, SDO.false))
-                else:
-                    g.add((layer, nnet.isTrainable, SDO.true))
+                # add quantization information to each layer
+                # if quantization_flag:
+                #     g.add((layer, nnet.isTrainable, SDO.false))
+                # else:
+                #     g.add((layer, nnet.isTrainable, SDO.true))
                 # Add data type to the tensor of each node/layer
                 if hasTensor:
                     g.add((layer, nnet.hasQuantization, addQuantization(tensor.Type())))
@@ -339,11 +360,11 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
                 # add activation information to semantic description.
                 # Only a few common activation are implemented
                 CODE2ACTIVATION = {
-                    1: nnet.relu,
-                    2: nnet.relu_n1_to_1,
-                    3: nnet.relu6,
-                    4: nnet.tanh,
-                    5: nnet.sign_bit,
+                    1: nnet.Relu,
+                    2: nnet.Relu_n1_to_1,
+                    3: nnet.Relu6,
+                    4: nnet.Tanh,
+                    5: nnet.Sign_bit,
                 }
                 if code in CODE2ACTIVATION:
                     g.add((layer, nnet.hasActivation, CODE2ACTIVATION[code]))
@@ -369,18 +390,18 @@ def tflite2semantic(path_, nameOfNN_, hardware_list_, hardware_info_, metrics_, 
 
             if j == 0:
                 # First layer is input layer
-                inputLayer = URIRef("http://example.org/neuralnetwork/inputLayer_" + idOfNN)
+                inputLayer = URIRef("http://tinyml-schema.org/neuralnetwork/inputLayer_" + idOfNN)
                 g.add((neuralNetwork, nnet.inputLayer, inputLayer))
                 addCommonInfo(inputLayer, input_layer=True)
                 g.add((inputLayer, nnet.hasIndex, Literal(j+1)))
             elif j == (graph.OperatorsLength() - 1):
                 # Last layer is output layer
-                outputLayer = URIRef("http://example.org/neuralnetwork/outputLayer_" + idOfNN)
+                outputLayer = URIRef("http://tinyml-schema.org/neuralnetwork/outputLayer_" + idOfNN)
                 g.add((neuralNetwork, nnet.outputLayer, outputLayer))
                 addCommonInfo(outputLayer, output_layer=True)
                 g.add((outputLayer, nnet.hasIndex, Literal(j+1)))
             else:
-                middleLayer = URIRef("http://example.org/neuralnetwork/middleLayer_" + "{}_".format(j) + idOfNN)
+                middleLayer = URIRef("http://tinyml-schema.org/neuralnetwork/middleLayer_" + "{}_".format(j) + idOfNN)
                 g.add((neuralNetwork, nnet.middleLayer, middleLayer))
                 g.add((middleLayer, nnet.hasIndex, Literal(j)))
                 addCommonInfo(middleLayer)
@@ -398,7 +419,7 @@ if __name__ == "__main__":
     test_model_dir = os.path.join(cur_dir, original)
     model_repo_dir = os.path.join(cur_dir, destination)
     print(test_model_dir)
-    workbook = pd.read_excel(os.path.join(cur_dir, "Models_Information.xlsx"), sheet_name=0)
+    workbook = pd.read_excel(os.path.join(cur_dir, "models_information.xlsx"), sheet_name=0)
 
     headers = [col for col in workbook.columns]
     model_count = 0
@@ -411,13 +432,13 @@ if __name__ == "__main__":
         # Ask user extra information regarding the model
         nameOfNN = workbook.loc[model_count][headers[0]]
 
-        # One can specify the type of the hardware which is used to collect data for NN training, as well as specific hardware setting
-        hardware = workbook.loc[model_count][headers[1]]
-        if not isinstance(hardware, int):
-            hardware_list = set(map(int, hardware.split(",")))
+        # One can specify the type of the sensor which is used to collect data for NN training, as well as specific sensor setting
+        sensor = workbook.loc[model_count][headers[1]]
+        if not isinstance(sensor, int):
+            sensor_list = set(map(int, sensor.split(",")))
         else:
-            hardware_list = [hardware]
-        hardware_info = workbook.loc[model_count][headers[2]]
+            sensor_list = [sensor]
+        sensor_info = workbook.loc[model_count][headers[2]]
 
         input_comment = workbook.loc[model_count][headers[3]]
 
@@ -444,13 +465,15 @@ if __name__ == "__main__":
 
         description = workbook.loc[model_count][headers[13]]
 
-        tflite2semantic(path, nameOfNN, hardware_list, hardware_info, metrics, metric_value, dataset, date, creator,
-                        location, reference, description, category, input_comment, output_comment)
+        runtime_platform = workbook.loc[model_count][headers[14]]
+
+        tflite2semantic(path, nameOfNN, sensor_list, sensor_info, metrics, metric_value, dataset, date, creator,
+                        location, reference, description, category, input_comment, output_comment, runtime_platform)
         model_count += 1
-        # print("{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}".format(nameOfNN, hardware_list, hardware_info, input_comment, output_comment, metrics, metric_value, category, location, dataset, reference, date, creator, description))
+        # print("{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}".format(nameOfNN, sensor_list, sensor_info, input_comment, output_comment, metrics, metric_value, category, location, dataset, reference, date, creator, description, runtime_platform))
 
     print("###################################Semantic Description#######################################")
     print(g.serialize(format='turtle').decode())
     # Save the ttl file
     with open(os.path.join(os.getcwd(), "semantic_schema", "tflite_models.ttl"), 'w') as f:
-        print(g.serialize(format='turtle').decode(), file=f)
+        print(g.serialize(format='turtle'), file=f)

@@ -148,3 +148,5 @@ semantic_schema/TopBraid
 semantic_schema/.project
 mxQueries.txt
 tinyML.mpk
+sparql_mx.py
+semantic_schema/tflite_models.ttl

@@ -1,4 +1,4 @@
-# baseURI: http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002
+# baseURI: http://tinyml-schema.org/tiny-demo/syntiant_tinyml-322-000-000-004
 
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,11 +14,8 @@
 @prefix s3n_extend: <http://tinyml-schema.org/s3n_extend/> .
 @prefix sosa_extend: <http://tinyml-schema.org/sosa_extend/> .
 
-<http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002>
+<http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004>
   rdf:type s3n:SmartSensor ;
-  ssn:hasSubSystem [
-      rdf:type sosa_extend:Thermometer ;
-    ] ;
   ssn:hasSubSystem [
       rdf:type sosa_extend:Accelerometer ;
     ] ;
@@ -26,10 +23,7 @@
       rdf:type sosa_extend:Gyroscope ;
 	] ;
   ssn:hasSubSystem [
-      rdf:type sosa_extend:Magnetometer ;
-	] ; 
-  ssn:hasSubSystem [
-      rdf:type sosa_extend:Microphone ;
+	  rdf:type sosa_extend:Microphone ;
 	] ; 
   ssn:hasSubSystem [
       rdf:type s3n:MicroController ;
@@ -37,38 +31,23 @@
           ssn-system:hasSystemProperty [
               rdf:type s3n_extend:Flash ;
               schema:unitCode om:kilobyte ;
-              schema:value 628 ;
+              schema:value 1883 ;
 			  rdfs:comment "Flash."@en ;
             ] ;
 		  ssn-system:hasSystemProperty [
 		      rdf:type s3n_extend:RAM ;
 		      schema:unitCode om:kilobyte ;
-		      schema:value 172 ;
+		      schema:value 25 ;
 			  rdfs:comment "RAM."@en ;
 		    ] ;
         ] ;
-      rdfs:comment "Arduino Nano BLE 33."@en ;
+      rdfs:comment "Syntiant TinyML Board."@en ;
     ] ;
-  td:description "Arduino Nano BLE 33 Micro Controller"@en ;
-  td:hasPropertyAffordance [
-      td:description "Temperature data."@en ;
-      td:hasForm [
-          td:href "http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/temperature"@en ;
-          td:op "observeproperty"@en ;
-          td:op "readproperty"@en ;
-        ] ;
-      td:isObservable "true"^^xsd:boolean ;
-      td:maximum 120 ;
-      td:minimum -40 ;
-      td:readOnly "true"^^xsd:boolean ;
-      td:title "Temperature"@en ;
-      td:type "number"@en ;
-      td:unit "om:degree_Celsius"@en ;
-    ] ;
+  td:description "Syntiant TinyML Board"@en ;
   td:hasPropertyAffordance [
       td:description "Acceleration data."@en ;
       td:hasForm [
-          td:href "http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/acceleration"@en ;
+          td:href "http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004/acceleration"@en ;
           td:op "observeproperty"@en ;
           td:op "readproperty"@en ;
         ] ;
@@ -83,7 +62,7 @@
   td:hasPropertyAffordance [
 	  td:description "Orientation data."@en ;
 	  td:hasForm [
-		  td:href "http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/orientation"@en ;
+		  td:href "http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004/orientation"@en ;
 		  td:op "observeproperty"@en ;
 		  td:op "readproperty"@en ;
 		] ;
@@ -96,24 +75,9 @@
 	  td:unit "om:degress_per_second"@en ;
 	] ;
   td:hasPropertyAffordance [
-	  td:description "Magnetic Field data."@en ;
-	  td:hasForm [
-		  td:href "http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/magneticField"@en ;
-		  td:op "observeproperty"@en ;
-		  td:op "readproperty"@en ;
-		] ;
-	  td:isObservable "true"^^xsd:boolean ;
-	  td:maximum 400 ;
-      td:minimum -400 ;
-	  td:readOnly "true"^^xsd:boolean ;
-	  td:title "MagneticField"@en ;
-	  td:type "number"@en ;
-	  td:unit "om:micro_tesla"@en ;
-	] ;
-  td:hasPropertyAffordance [
 	  td:description "Sound."@en ;
 	  td:hasForm [
-		  td:href "http://tinyml-schema.org/tinyml-demo/arduino_nano_ble_33-322-000-000-002/sound"@en ;
+		  td:href "http://tinyml-schema.org/tinyml-demo/syntiant_tinyml-322-000-000-004/sound"@en ;
 		  td:op "observeproperty"@en ;
 		  td:op "readproperty"@en ;
 		] ;
@@ -126,5 +90,5 @@
   td:securityDefinitions [
       td:scheme "nosec"@en ;
     ] ;
-  td:title "Arduino-Nano-BLE-33_1"@en ;
+  td:title "Syntiant-TinyML-Board_1"@en ;
 .
