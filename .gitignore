@@ -144,6 +144,7 @@ rdf2mx/
 rdf2mx_/
 semantic_schema/.metadata
 semantic_schema/backup
+semantic_schema/backup_
 semantic_schema/TopBraid
 semantic_schema/.project
 mxQueries.txt
