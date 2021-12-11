@@ -14,10 +14,10 @@ To be added
 ```
 
 ## Project Structure
-* [collected_models](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/-/tree/main/collected_models): the TinyML  (tflite) models that we collected
-* [estimate_tensor_arena_size](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/-/tree/main/estimate_tensor_arena_size): the source file to estimate the RAM consumption given a tflite model
-* [model_repo](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/-/tree/main/model_repo): a folder to stimulate a model repo for hosting the parsed tflite models
-* [semantic_schema](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/-/tree/main/semantic_schema): the RDF schema / information model we proposed for neural network and embedded devices, as well as the supplementary schema
+* [collected_models](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/tree/main/collected_models): the TinyML  (tflite) models that we collected
+* [estimate_tensor_arena_size](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/tree/main/estimate_tensor_arena_size): the source file to estimate the RAM consumption given a tflite model
+* [model_repo](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/tree/main/model_repo): a folder to stimulate a model repo for hosting the parsed tflite models
+* [semantic_schema](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/tree/main/semantic_schema): the RDF schema / information model we proposed for neural network and embedded devices, as well as the supplementary schema
 * Models_Information.xlsx: an excel sheet storing the information of collected tflite models for easier parsing
 * bin2tflite.py: convert binary tinyml model to tflite format
 * find-arena-size: the binary executable to calculate RAM consumption given a tflite model
@@ -27,7 +27,7 @@ To be added
 * semantic_querying.py: use SPARQL to query the knowledge graph hosted in GraphDB
 * semantic_utils.py
 * sparql_queries.py: example  SPARQL queries
-* tflite2semantic_parser_xlsx.py: generate semantic representations of the NN models stored in the folder [collected_models](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/-/tree/main/collected_models) against the [proposed semantic schema](## Semantic Schema of Neural Network) combining the information provided in `Models_Information.xlsx`
+* tflite2semantic_parser_xlsx.py: generate semantic representations of the NN models stored in the folder [collected_models](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/tree/main/collected_models) against the [proposed semantic schema](## Semantic Schema of Neural Network) combining the information provided in `Models_Information.xlsx`
 * tflite2semantic_user_input.py: generate a semantic representation for each NN model against the [proposed semantic schema](## Semantic Schema of Neural Network) by asking the user a few input questions
 
 ## Use
@@ -45,7 +45,7 @@ Install the dependency:
 pip install -r requirement.txt
 ```
 
-Run  `tflite2semantic_parser_xlsx.py` to see how the collected models in the [model_repo](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/-/tree/main/model_repo) can be parsed into semantic representation against the [proposed semantic schema](## Semantic Schema of Neural Network) combining the information provided in `Models_Information.xlsx` in one go. Please be aware that the order of the models listed in the the folder `collected_models`  and in the information sheet `Models_Information.xlsx` should both be in alphabetic order and match with each other.
+Run  `tflite2semantic_parser_xlsx.py` to see how the collected models in the [model_repo](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/tree/main/model_repo) can be parsed into semantic representation against the [proposed semantic schema](## Semantic Schema of Neural Network) combining the information provided in `Models_Information.xlsx` in one go. Please be aware that the order of the models listed in the the folder `collected_models`  and in the information sheet `Models_Information.xlsx` should both be in alphabetic order and match with each other.
 
 Run  `tflite2semantic_user_input.py` to see how each model can be parsed into semantic representation by answering a few questions in the CMD.
 
@@ -61,7 +61,7 @@ To be added
 ```
 
 ## Related Project
-* [Demo_Arduino_Motion](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/-/tree/main/Demo_Arduino_Motion): the Arduino implementation for loading and deploying tflite micro models from a central device to an Arduino Nano 33 BLE Sense board using BLE on the fly.
+* [Demo_Arduino_Motion](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale/tree/main/Demo_Arduino_Motion): the Arduino implementation for loading and deploying tflite micro models from a central device to an Arduino Nano 33 BLE Sense board using BLE on the fly.
 
 ## Contributing to the project
 
