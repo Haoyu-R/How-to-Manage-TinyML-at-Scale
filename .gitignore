@@ -140,3 +140,11 @@ cython_debug/
 # Customized
 .idea/
 paper/
+rdf2mx/
+rdf2mx_/
+semantic_schema/.metadata
+semantic_schema/backup
+semantic_schema/TopBraid
+semantic_schema/.project
+mxQueries.txt
+tinyML.mpk
