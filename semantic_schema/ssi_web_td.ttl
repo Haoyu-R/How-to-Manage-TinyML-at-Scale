@@ -14,7 +14,6 @@
 @prefix s3n_extend: <http://tinyml-schema.org/s3n_extend/> .
 @prefix sosa_extend: <http://tinyml-schema.org/sosa_extend/> .
 
-
 <http://tinyml-schema.org/tinyml-demo/SSI_Web-322-000-000-001>
   rdf:type s3n:SmartSensor ;
   ssn:hasSubSystem [

@@ -16,7 +16,7 @@
   rdf:type owl:ObjectProperty ;
   rdfs:comment "Relation between a Sensor and a NeuralNetwork input."@en ;
   rdfs:isDefinedBy ssn_extend: ;
-  rdfs:label "sensor input"@en ;
+  rdfs:label "sensor provides input"@en ;
   schema:domainIncludes sosa:Sensor ;
   schema:rangeIncludes ssn:Input ;
 .

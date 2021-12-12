@@ -52,7 +52,7 @@
         ] ;
       rdfs:comment "Arduino Nano BLE 33 TinyML Kit."@en ;
     ] ;
-  td:description "Arduino Nano BLE 33 Micro Controller"@en ;
+  td:description "Arduino Nano BLE 33 TinyML Kit."@en ;
   td:hasPropertyAffordance [
       td:description "Temperature data."@en ;
       td:hasForm [

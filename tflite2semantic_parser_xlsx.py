@@ -169,11 +169,7 @@ def tflite2semantic(path_, nameOfNN_, sensor_list_, sensor_info_, metrics_, metr
     g.add((procedureFeature_2, RDF.type, s3n.ProcedureFeature))
     g.add((procedureFeature_2, RDFS.label, Literal("procedureFeature_2")))
     g.add((procedureFeature_2, ssn_system.inCondition, condition_2))
-    # print(os.popen("./find-arena-size {}".format("collected_models/Hello_World.tflite")).read())
-    # print(path_)
-    # print(os.popen("./find-arena-size {}".format(path_)).read())
     tensorSize = int(os.popen("./find-arena-size {}".format(path_)).read())
-    # tensorSize = 222
     g.add((condition_2, SDO.minValue, Literal(tensorSize / 1000)))
     g.add((neuralNetwork, s3n.hasProcedureFeature, procedureFeature_2))
 
@@ -411,6 +407,7 @@ def tflite2semantic(path_, nameOfNN_, sensor_list_, sensor_info_, metrics_, metr
                 # g.add((middleLayer, RDFS.label, Literal("middleLayer_" + idOfNN + "_{}".format(j))))
                 g.add((middleLayer, nnet.hasIndex, Literal(j)))
             # --------------------------------------
+
 
 if __name__ == "__main__":
 
