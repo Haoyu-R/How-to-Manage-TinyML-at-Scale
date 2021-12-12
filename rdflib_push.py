@@ -3,8 +3,8 @@ import requests
 import os
 
 # Put the repository URL from Graph DB here
-repo_url = "http://192.168.1.108:7200/repositories/tinyml_2022"
-file_name = "syntiant_TinyML_board.ttl"
+repo_url = "http://192.168.1.106:7200/repositories/tinyml2022_v2"
+file_name = "tflite_models.ttl"
 file_path = os.path.join(os.getcwd(), "semantic_schema", file_name)
 url = repo_url + "/statements"
 headers = {'Content-type': 'text/turtle',}

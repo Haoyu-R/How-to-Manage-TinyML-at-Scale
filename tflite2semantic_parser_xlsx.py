@@ -25,6 +25,7 @@ ssn_system = Namespace("http://www.w3.org/ns/ssn/systems/")
 ssn_extend = Namespace("http://tinyml-schema.org/ssn_extend/")
 sosa_extend = Namespace("http://tinyml-schema.org/sosa_extend/")
 s3n_extend = Namespace("http://tinyml-schema.org/s3n_extend/")
+om = Namespace("http://www.ontology-of-units-of-measure.org/resource/om-2/")
 
 # Create a Graph
 g = Graph()
@@ -36,9 +37,11 @@ nm.bind("nnet", nnet)
 nm.bind("schema", SDO)
 nm.bind("s3n", s3n)
 nm.bind("ssn", SSN)
+nm.bind("om", om)
 nm.bind("ssn_extend", ssn_extend)
 nm.bind("sosa_extend", sosa_extend)
 nm.bind("s3n_extend", s3n_extend)
+
 
 def tflite2semantic(path_, nameOfNN_, sensor_list_, sensor_info_, metrics_, metric_value_, dataset_, date_, creator_,
                         location_, reference_, description_, category_, input_comment_, output_comment_, runtime_):
@@ -150,7 +153,7 @@ def tflite2semantic(path_, nameOfNN_, sensor_list_, sensor_info_, metrics_, metr
     # Add flash requirement of NN.
     g.add((condition_1, RDF.type, s3n.Memory))
     g.add((condition_1, RDF.type, s3n_extend.Flash))
-    g.add((condition_1, SDO.unitCode, Literal("om.kilobyte")))
+    g.add((condition_1, SDO.unitCode, om.kilobyte))
     g.add((condition_1, RDFS.label, Literal("Flash requirement.")))
     g.add((procedureFeature_1, RDF.type, s3n.ProcedureFeature))
     g.add((procedureFeature_1, RDFS.label, Literal("procedureFeature_1")))
@@ -161,7 +164,7 @@ def tflite2semantic(path_, nameOfNN_, sensor_list_, sensor_info_, metrics_, metr
     # Add RAM requirement of NN.
     g.add((condition_2, RDF.type, s3n.Memory))
     g.add((condition_2, RDF.type, s3n_extend.RAM))
-    g.add((condition_2, SDO.unitCode, Literal("om.kilobyte")))
+    g.add((condition_2, SDO.unitCode, om.kilobyte))
     g.add((condition_2, RDFS.label, Literal("RAM requirement.")))
     g.add((procedureFeature_2, RDF.type, s3n.ProcedureFeature))
     g.add((procedureFeature_2, RDFS.label, Literal("procedureFeature_2")))
@@ -169,8 +172,8 @@ def tflite2semantic(path_, nameOfNN_, sensor_list_, sensor_info_, metrics_, metr
     # print(os.popen("./find-arena-size {}".format("collected_models/Hello_World.tflite")).read())
     # print(path_)
     # print(os.popen("./find-arena-size {}".format(path_)).read())
-    # tensorSize = int(os.popen("./find-arena-size {}".format(path_)).read())
-    tensorSize = 222
+    tensorSize = int(os.popen("./find-arena-size {}".format(path_)).read())
+    # tensorSize = 222
     g.add((condition_2, SDO.minValue, Literal(tensorSize / 1000)))
     g.add((neuralNetwork, s3n.hasProcedureFeature, procedureFeature_2))
 
@@ -476,4 +479,4 @@ if __name__ == "__main__":
     print(g.serialize(format='turtle').decode())
     # Save the ttl file
     with open(os.path.join(os.getcwd(), "semantic_schema", "tflite_models.ttl"), 'w') as f:
-        print(g.serialize(format='turtle'), file=f)
+        print(g.serialize(format='turtle').decode(), file=f)
