@@ -1,202 +1,52 @@
-# baseURI: http://tinyml-schema.org/networkschema/
-# imports: https://schema.org/
-# imports: http://w3id.org/s3n/S3NCore
-# imports: http://w3id.org/s3n/S3NProcedure
+# baseURI: https://w3id.org/tinyml-schema/neural-network-schema
 
-@prefix : <http://tinyml-schema.org/networkschema/> .
+@prefix : <https://w3id.org/tinyml-schema/neural-network-schema#> .
+@prefix cep: <https://w3id.org/tinyml-schema/cep-rule-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix s3n: <http://w3id.org/s3n/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix schema: <https://schema.org/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
-# Layer 
-:Layer
-  rdf:type owl:Class ;
-  rdfs:comment "Layer of a neural network." ;
-  rdfs:label "Layer" ;
-  rdfs:subClassOf rdfs:Class ;
+<https://w3id.org/tinyml-schema/neural-network-schema#>
+  dc:title "The TinyML Neural Network Ontology" ;
+  rdf:type owl:Ontology ;
+  rdfs:comment "This is a schema for semantically describing artificial neural networks aligned with the World Wide Web Consortium (W3C) Thing Description, which semantically describes IoT devices. Our goal is to enable the joint management of TinyML models and IoT devices at scale, from modeling information to discovering possible combinations and benchmarking, and eventually facilitate TinyML component exchange and reuse." ;
+  dc:issued "2022-01-14" ;
+  dc:creator [ a foaf:Agent ; foaf:name "Haoyu Ren"@en ] ;
+  dc:creator [ a foaf:Agent ; foaf:name "Darko Anicic"@en ] ;
+  dc:creator [ a foaf:Agent ; foaf:name "Thomas A. Runkler"@en ] ;
+  vann:preferredNamespaceUri "https://w3id.org/tinyml-schema/neural-network-schema#" ;
+  rdfs:label "The TinyML Neural Network Ontology" ;
+  vs:term_status "stable" ;
+  vann:preferredNamespacePrefix "nnet" ;
+  owl:versionInfo 3.0 ;
 .
-# A layer could be an input/output/middleLayer
-:inputLayer
-  rdf:type rdf:Property ;
-  schema:domainIncludes :NeuralNetwork ;
-  schema:rangeIncludes :Layer ;
-  rdfs:comment "Input layer of a neural network." ;
-  rdfs:label "inputLayer" ;
-.
-:middleLayer
-  rdf:type rdf:Property ;
-  schema:domainIncludes :NeuralNetwork ;
-  schema:rangeIncludes :Layer ;
-  rdfs:comment "Middle layer of a neural network." ;
-  rdfs:label "middleLayer" ;
-.
-:outputLayer
-  rdf:type rdf:Property ;
-  schema:domainIncludes :NeuralNetwork ;
-  schema:rangeIncludes :Layer ;
-  rdfs:comment "Output layer of a neural network." ;
-  rdfs:label "outputLayer" ;
-.
-# Shape of input and output of a layer
-:shapeIn
-  rdf:type rdf:Property ;
-  schema:domainIncludes :Layer ;
-  schema:rangeIncludes schema:Number ;
-  rdfs:comment "Shape of input of a layer." ;
-  rdfs:label "shapeIn" ;
-.
-:shapeOut
-  rdf:type rdf:Property ;
-  schema:domainIncludes :Layer ;
-  schema:rangeIncludes schema:Number ;
-  rdfs:comment "Shape of output of a layer." ;
-  rdfs:label "shapeOut" ;
-.
-# Sequence of each layer
-:hasIndex
-  rdf:type rdf:Property ;
-  schema:domainIncludes :Layer ;
-  schema:rangeIncludes schema:Integer ;
-  rdfs:comment "Index of a layer." ;
-  rdfs:label "index" ;
-.
-# Activation function of each layer
-:hasActivation
-  rdf:type rdf:Property ;
-  schema:domainIncludes :Layer ;
-  schema:rangeIncludes :Activation ;
-  rdfs:comment "The activation function of a layer." ;
-  rdfs:label "hasActivationFunction" ;
-.
-:Activation
-  rdf:type owl:Class ;
-  rdfs:comment "Type of activation of a layer." ;
-  rdfs:label "Activation" ;
-  rdfs:subClassOf schema:Enumeration ;
-  rdfs:subClassOf rdfs:Class ;
-.
-:Relu
-  rdf:type :Activation ;
-  rdfs:comment "Relu activation of a Layer." ;
-  rdfs:label "relu" ;
-.
-:Tanh
-  rdf:type :Activation ;
-  rdfs:comment "Tanh activation of a Layer." ;
-  rdfs:label "tanh" ;
-.
-# Quantization info of each layer
-:hasQuantization
-  rdf:type rdf:Property ;
-  schema:domainIncludes :Layer ;
-  schema:rangeIncludes :Quantization ;
-  rdfs:comment "The quantization of a layer." ;
-  rdfs:label "hasQuantization" ;
-.
-:Quantization
-  rdf:type owl:Class ;
-  rdfs:comment "Type of quantization of a layer." ;
-  rdfs:label "Quantization" ;
-  rdfs:subClassOf schema:Enumeration ;
-  rdfs:subClassOf rdfs:Class ;
-.
-:Float32
-  rdf:type :Quantization ;
-  rdfs:comment "Data type: Floating number 32." ;
-  rdfs:label "float32" ;
-.
-:Float16
-  rdf:type :Quantization ;
-  rdfs:comment "Data type: Floating number 16." ;
-  rdfs:label "float16" ;
-.
-:Int16
-  rdf:type :Quantization ;
-  rdfs:comment "Data type: Integer number 16." ;
-  rdfs:label "int16" ;
-.
-:Int8
-  rdf:type :Quantization ;
-  rdfs:comment "Data type: Integer number 8." ;
-  rdfs:label "int8" ;
-.
-# Type of a layer
-:hasType
-  rdf:type rdf:Property ;
-  schema:domainIncludes :Layer ;
-  schema:rangeIncludes :LayerType ;
-  rdfs:comment "Type of a layer of a neural network." ;
-  rdfs:label "hasType" ;
-.
-:LayerType
-  rdf:type owl:Class ;
-  rdfs:comment "Type of layer." ;
-  rdfs:label "LayerType" ;
-  rdfs:subClassOf schema:Enumeration ;
-  rdfs:subClassOf rdfs:Class ;
-.
-:FullyConnected
-  rdf:type :LayerType ;
-  rdfs:comment "Fully connected layer." ;
-  rdfs:label "FullyConnected" ;
-.
-:Dequantize
-  rdf:type :LayerType ;
-  rdfs:comment "Dequantize layer." ;
-  rdfs:label "dequantize" ;
-.
-:Quantize
-  rdf:type :LayerType ;
-  rdfs:comment "Quantize layer." ;
-  rdfs:label "quantize" ;
-.
-:Logistic
-  rdf:type :LayerType ;
-  rdfs:comment "Logistic Layer." ;
-  rdfs:label "logistic" ;
-.
-:Softmax
-  rdf:type :LayerType ;
-  rdfs:comment "softmax Layer." ;
-  rdfs:label "softmax" ;
-.
-:DepthwiseConv2D
-  rdf:type :LayerType ;
-  rdfs:comment "depthwiseConv2D Layer." ;
-  rdfs:label "depthwiseConv2D" ;
-.
-:Reshape
-  rdf:type :LayerType ;
-  rdfs:comment "reshape Layer." ;
-  rdfs:label "reshape" ;
-.
-:MaxPool2D
-  rdf:type :LayerType ;
-  rdfs:comment "MaxPool2D Layer." ;
-  rdfs:label "maxPool2D" ;
-.
-:Conv2D
-  rdf:type :LayerType ;
-  rdfs:comment "Conv2D Layer." ;
-  rdfs:label "conv2D" ;
-.
-:AveragePool2D
-  rdf:type :LayerType ;
-  rdfs:comment "AveragePool2D Layer." ;
-  rdfs:label "averagePool2D" ;
-.
-:ResizeNearestNeighbor
-  rdf:type :LayerType ;
-  rdfs:comment "ResizeNearestNeighbor Layer." ;
-  rdfs:label "resizeNearestNeighbor" ;
-.
-# NN itself
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+dc:issued rdf:type owl:AnnotationProperty .
+dc:title rdf:type owl:AnnotationProperty .
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+vs:term_status rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
 :NeuralNetwork
   rdf:type owl:Class ;
   rdfs:label "A neural network." ;
+  rdfs:comment "A neural network is a computer system modeled on the biological neural networks that form the brains of humans. An NN consists of layers, which can be divided into three categories: the input layer, the middle layer (hidden layer), and the output layer. Layers are composed of many interconnected neurons, each with its weights for participating computation. The input data circulates between layers and results in output." ;
   rdfs:subClassOf s3n:Algorithm ;
   rdfs:subClassOf schema:SoftwareSourceCode ;
   rdfs:subClassOf rdfs:Class ;
@@ -212,115 +62,328 @@
     ] ;
 .
 
-
-# Metric information of the NN
-:hasMetric
-  rdf:type rdf:Property ;
-  schema:domainIncludes :NeuralNetwork ;
-  schema:rangeIncludes :Metric ;
-  rdfs:comment "Information about the performance of a neural network." ;
-  rdfs:label "hasMetric" ;
+:Layer
+  rdf:type owl:Class ;
+  rdfs:comment "A layer of a neural network." ;
+  rdfs:label "Layer" ;
+  rdfs:subClassOf rdfs:Class ;
 .
+
+:Activation
+  rdf:type owl:Class ;
+  rdfs:comment "The type of activation of a layer." ;
+  rdfs:label "Activation" ;
+  rdfs:subClassOf schema:Enumeration ;
+  rdfs:subClassOf rdfs:Class ;
+.
+
+:Quantization
+  rdf:type owl:Class ;
+  rdfs:comment "The type of quantization of a layer." ;
+  rdfs:label "Quantization" ;
+  rdfs:subClassOf schema:Enumeration ;
+  rdfs:subClassOf rdfs:Class ;
+.
+
+:LayerType
+  rdf:type owl:Class ;
+  rdfs:comment "The type of a layer." ;
+  rdfs:label "LayerType" ;
+  rdfs:subClassOf schema:Enumeration ;
+  rdfs:subClassOf rdfs:Class ;
+.
+
 :Metric
   rdf:type owl:Class ;
-  rdfs:comment "Metric Type." ;
+  rdfs:comment "The metric type used for training the neural network" ;
   rdfs:label "Metric" ;
   rdfs:subClassOf schema:Enumeration ;
   rdfs:subClassOf rdfs:Class ;
 .
-:hasMetricValue
-  rdf:type rdf:Property ;
-  schema:domainIncludes :Metric ;
-  schema:rangeIncludes schema:Number ;
-  rdfs:comment "Value of the performance metric of a neural network." ;
-  rdfs:label "hasMetricValue" ;
-.
-:Top_1_accuracy
-  rdf:type :Metric ;
-  rdfs:comment "The top 1 accurary of the model." ;
-  rdfs:label "top_1_accuracy" ;
-.
-:Top_5_accuracy
-  rdf:type :Metric ;
-  rdfs:comment "The top 5 accurary of the model." ;
-  rdfs:label "top_5_accuracy" ;
-.
 
-
-:trainingDataset
-  rdf:type rdf:Property ;
-  schema:domainIncludes :NeuralNetwork ;
-  schema:rangeIncludes schema:url ;
-  rdfs:comment "The information about the used dataset." ;
-  rdfs:label "dataset" ;
-.
-
-
-:hasMultiplyAccumulateOps
-  rdf:type rdf:Property ;
-  schema:domainIncludes :NeuralNetwork ;
-  schema:rangeIncludes schema:Number ;
-  rdfs:comment "Muliply accumulate operations." ;
-  rdfs:label "hasMultiplyAccumulateOps" ;
-.
-
-# The category of the NN
-:hasCategory
-  rdf:type rdf:Property ;
-  schema:domainIncludes :NeuralNetwork ;
-  schema:rangeIncludes :NetworkCategory ;
-  rdfs:comment "Category of a neural network." ;
-  rdfs:label "hasCategory" ;
-.
 :NetworkCategory
   rdf:type owl:Class ;
-  rdfs:comment "Category." ;
-  rdfs:label "Category" ;
+  rdfs:comment "The category of the neural network" ;
+  rdfs:label "NetworkCategory" ;
   rdfs:subClassOf schema:Enumeration ;
   rdfs:subClassOf rdfs:Class ;
 .
-:Classification
-  rdf:type :NetworkCategory ;
-  rdfs:comment "Classification." ;
-  rdfs:label "Classification" ;
-.
-:ObjectDetection
-  rdf:type :NetworkCategory ;
-  rdfs:comment "Object Detection." ;
-  rdfs:label "ObjectDetection" ;
-.
-:FeatureExtraction
-  rdf:type :NetworkCategory ;
-  rdfs:comment "Feature Extraction." ;
-  rdfs:label "FeatureExtraction" ;
-.
-:Unsupervised
-  rdf:type :NetworkCategory ;
-  rdfs:comment "The NN is designed for an unsupervised problem, most probably it will be an Autoencoder." ;
-  rdfs:label "Unsupervised" ;
-.
 
-# Input information of the NN
 :NetworkInput
   rdf:type owl:Class ;
   rdfs:label "NetworkInput" ;
   rdfs:comment "A description of the input to the NN." ;
   rdfs:subClassOf ssn:Input ;
 .
-:hasInputInfo rdf:type rdf:Property ;
-           schema:domainIncludes :NetworkInput ;
-           schema:rangeIncludes schema:Text ;
-           rdfs:comment "Provide extra information about the NN input." ;
-           rdfs:label "InputInfo" .
-# Output information of the NN
+
 :NetworkOutput
   rdf:type owl:Class ;
   rdfs:label "NetworkOutput" ;
   rdfs:comment "A description of the output from the NN." ;
   rdfs:subClassOf ssn:Output ;
 .
+#################################################################
+#    Properties
+#################################################################
+
+:inputLayer
+  rdf:type rdf:Property ;
+  schema:domainIncludes :NeuralNetwork ;
+  schema:rangeIncludes :Layer ;
+  rdfs:comment "The input layer of a neural network." ;
+  rdfs:label "inputLayer" ;
+.
+:middleLayer
+  rdf:type rdf:Property ;
+  schema:domainIncludes :NeuralNetwork ;
+  schema:rangeIncludes :Layer ;
+  rdfs:comment "The middle layer of a neural network." ;
+  rdfs:label "middleLayer" ;
+.
+:outputLayer
+  rdf:type rdf:Property ;
+  schema:domainIncludes :NeuralNetwork ;
+  schema:rangeIncludes :Layer ;
+  rdfs:comment "The output layer of a neural network." ;
+  rdfs:label "outputLayer" ;
+.
+
+:shapeIn
+  rdf:type rdf:Property ;
+  schema:domainIncludes :Layer ;
+  schema:rangeIncludes schema:Number ;
+  rdfs:comment "The shape of input of a layer." ;
+  rdfs:label "shapeIn" ;
+.
+:shapeOut
+  rdf:type rdf:Property ;
+  schema:domainIncludes :Layer ;
+  schema:rangeIncludes schema:Number ;
+  rdfs:comment "The shape of output of a layer." ;
+  rdfs:label "shapeOut" ;
+.
+
+:hasIndex
+  rdf:type rdf:Property ;
+  schema:domainIncludes :Layer ;
+  schema:rangeIncludes schema:Integer ;
+  rdfs:comment "The index of a layer." ;
+  rdfs:label "hasIndex" ;
+.
+
+:hasActivation
+  rdf:type rdf:Property ;
+  schema:domainIncludes :Layer ;
+  schema:rangeIncludes :Activation ;
+  rdfs:comment "The activation function of a layer." ;
+  rdfs:label "hasActivationFunction" ;
+.
+
+:hasQuantization
+  rdf:type rdf:Property ;
+  schema:domainIncludes :Layer ;
+  schema:rangeIncludes :Quantization ;
+  rdfs:comment "The quantization of a layer." ;
+  rdfs:label "hasQuantization" ;
+.
+
+:hasType
+  rdf:type rdf:Property ;
+  schema:domainIncludes :Layer ;
+  schema:rangeIncludes :LayerType ;
+  rdfs:comment "The type of a layer of a neural network." ;
+  rdfs:label "hasType" ;
+.
+
+:hasMetric
+  rdf:type rdf:Property ;
+  schema:domainIncludes :NeuralNetwork ;
+  schema:rangeIncludes :Metric ;
+  rdfs:comment "The information about the performance of a neural network." ;
+  rdfs:label "hasMetric" ;
+.
+:hasMetricValue
+  rdf:type rdf:Property ;
+  schema:domainIncludes :Metric ;
+  schema:rangeIncludes schema:Number ;
+  rdfs:comment "The value of the metric of a neural network." ;
+  rdfs:label "hasMetricValue" ;
+.
+
+:trainingDataset
+  rdf:type rdf:Property ;
+  schema:domainIncludes :NeuralNetwork ;
+  schema:rangeIncludes schema:url ;
+  rdfs:comment "The information about the used training dataset." ;
+  rdfs:label "trainingDataset" ;
+.
+
+:hasMultiplyAccumulateOps
+  rdf:type rdf:Property ;
+  schema:domainIncludes :NeuralNetwork ;
+  schema:rangeIncludes schema:Number ;
+  rdfs:comment "The muliply accumulate operations count of the neural network." ;
+  rdfs:label "hasMultiplyAccumulateOps" ;
+.
+
+:hasCategory
+  rdf:type rdf:Property ;
+  schema:domainIncludes :NeuralNetwork ;
+  schema:rangeIncludes :NetworkCategory ;
+  rdfs:comment "The category of a neural network." ;
+  rdfs:label "hasCategory" ;
+.
+
+:hasInputInfo rdf:type rdf:Property ;
+           schema:domainIncludes :NetworkInput ;
+           schema:rangeIncludes schema:Text ;
+           rdfs:comment "The extra information about the NN input." ;
+           rdfs:label "hasInputInfo" ;
+.
 :hasOutputInfo rdf:type rdf:Property ;
            schema:domainIncludes :NetworkOutput ;
            schema:rangeIncludes schema:Text ;
-           rdfs:comment "Provide extra information about the NN output." ;
-           rdfs:label "OutputInfo" .
+           rdfs:comment "The extra information about the NN output." ;
+           rdfs:label "hasOutputInfo" ;
+.
+
+#################################################################
+#    LayerType
+#################################################################
+
+:FullyConnected
+  rdf:type :LayerType ;
+  rdfs:comment "Fully connected layer." ;
+  rdfs:label "FullyConnected" ;
+.
+:Dequantize
+  rdf:type :LayerType ;
+  rdfs:comment "Dequantize layer." ;
+  rdfs:label "Dequantize" ;
+.
+:Quantize
+  rdf:type :LayerType ;
+  rdfs:comment "Quantize layer." ;
+  rdfs:label "Quantize" ;
+.
+:Logistic
+  rdf:type :LayerType ;
+  rdfs:comment "Logistic Layer." ;
+  rdfs:label "Logistic" ;
+.
+:Softmax
+  rdf:type :LayerType ;
+  rdfs:comment "Softmax Layer." ;
+  rdfs:label "Softmax" ;
+.
+:DepthwiseConv2D
+  rdf:type :LayerType ;
+  rdfs:comment "DepthwiseConv2D Layer." ;
+  rdfs:label "DepthwiseConv2D" ;
+.
+:Reshape
+  rdf:type :LayerType ;
+  rdfs:comment "Reshape Layer." ;
+  rdfs:label "Reshape" ;
+.
+:MaxPool2D
+  rdf:type :LayerType ;
+  rdfs:comment "MaxPool2D Layer." ;
+  rdfs:label "MaxPool2D" ;
+.
+:Conv2D
+  rdf:type :LayerType ;
+  rdfs:comment "Conv2D Layer." ;
+  rdfs:label "Conv2D" ;
+.
+:AveragePool2D
+  rdf:type :LayerType ;
+  rdfs:comment "AveragePool2D Layer." ;
+  rdfs:label "AveragePool2D" ;
+.
+:ResizeNearestNeighbor
+  rdf:type :LayerType ;
+  rdfs:comment "ResizeNearestNeighbor Layer." ;
+  rdfs:label "ResizeNearestNeighbor" ;
+.
+
+#################################################################
+#    Quantization
+#################################################################
+
+:Float32
+  rdf:type :Quantization ;
+  rdfs:comment "Data type: Floating number 32." ;
+  rdfs:label "Float32" ;
+.
+:Float16
+  rdf:type :Quantization ;
+  rdfs:comment "Data type: Floating number 16." ;
+  rdfs:label "Float16" ;
+.
+:Int16
+  rdf:type :Quantization ;
+  rdfs:comment "Data type: Integer number 16." ;
+  rdfs:label "Int16" ;
+.
+:Int8
+  rdf:type :Quantization ;
+  rdfs:comment "Data type: Integer number 8." ;
+  rdfs:label "Int8" ;
+.
+
+#################################################################
+#    Category
+#################################################################
+
+:Classification
+  rdf:type :NetworkCategory ;
+  rdfs:comment "The category of the neural network: Classification." ;
+  rdfs:label "Classification" ;
+.
+:ObjectDetection
+  rdf:type :NetworkCategory ;
+  rdfs:comment "The category of the neural network: Object Detection." ;
+  rdfs:label "ObjectDetection" ;
+.
+:FeatureExtraction
+  rdf:type :NetworkCategory ;
+  rdfs:comment "The category of the neural network: Feature Extraction." ;
+  rdfs:label "FeatureExtraction" ;
+.
+:Unsupervised
+  rdf:type :NetworkCategory ;
+  rdfs:comment "The category of the neural network: Unsupervised. The NN is designed for an unsupervised problem, most probably it will be an Autoencoder." ;
+  rdfs:label "Unsupervised" ;
+.
+
+#################################################################
+#    Layer Activation
+#################################################################
+
+:Relu
+  rdf:type :Activation ;
+  rdfs:comment "Relu activation of a Layer." ;
+  rdfs:label "Relu" ;
+.
+:Tanh
+  rdf:type :Activation ;
+  rdfs:comment "Tanh activation of a Layer." ;
+  rdfs:label "Tanh" ;
+.
+
+#################################################################
+#    Metric
+#################################################################
+
+:Top_1_accuracy
+  rdf:type :Metric ;
+  rdfs:comment "The top 1 accurary of the model." ;
+  rdfs:label "Top_1_accuracy" ;
+.
+:Top_5_accuracy
+  rdf:type :Metric ;
+  rdfs:comment "The top 5 accurary of the model." ;
+  rdfs:label "Top_5_accuracy" ;
+.
+

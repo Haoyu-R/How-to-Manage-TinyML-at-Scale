@@ -37,7 +37,7 @@
         ] ;
       rdfs:comment "Adafruit Pybadge."@en ;
     ] ;
-  td:description "Syntiant TinyML Board"@en ;
+  td:description "Adafruit Pybadge"@en ;
   td:hasPropertyAffordance [
       td:description "Acceleration data."@en ;
       td:hasForm [
@@ -57,5 +57,5 @@
   td:securityDefinitions [
       td:scheme "nosec"@en ;
     ] ;
-  td:title "Syntiant-TinyML-Board_1"@en ;
+  td:title "Adafruit-Pybadge_1"@en ;
 .

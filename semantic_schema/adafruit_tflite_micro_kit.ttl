@@ -38,9 +38,9 @@
 			  rdfs:comment "RAM."@en ;
 		    ] ;
         ] ;
-      rdfs:comment "Adafruit Pybadge."@en ;
+      rdfs:comment "Adafruit Tflite Micro Kit."@en ;
     ] ;
-  td:description "Syntiant TinyML Board"@en ;
+  td:description "Adafruit Tflite Micro Kit"@en ;
   td:hasPropertyAffordance [
       td:description "Acceleration data."@en ;
       td:hasForm [
@@ -72,5 +72,5 @@
   td:securityDefinitions [
       td:scheme "nosec"@en ;
     ] ;
-  td:title "Syntiant-TinyML-Board_1"@en ;
+  td:title "adafruit_tflite_micro_kit_1"@en ;
 .

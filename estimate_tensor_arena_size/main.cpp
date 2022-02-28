@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    size_t arena_size = find_arena_size(tflite_buffer, 4 * 1024 * 1024);
+    size_t arena_size = find_arena_size(tflite_buffer, 100 * 1024 * 1024);
     printf("{\"arena_size\": %zu}\n", arena_size);
     if (arena_size < 0) {
         return 1;
