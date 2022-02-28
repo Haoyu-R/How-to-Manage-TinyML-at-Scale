@@ -3,14 +3,21 @@
 The future of machine learning (ML) is tiny and bright. Embedded ML has risen to popularity in an era. Various neural networks are proposed to run on constrained microcontrollers which can consume sensor data everywhere in real-time.  Embedded devices are typically customized towards specific tasks and are subject to heterogeneity and fragmentation. The deployment of TinyML in production has to take hardware constraints under consideration, such as available onboard sensors and memory.  The management of TinyML systems becomes increasing cumbersome considering the diversity and vast amount of ML models and microcontrollers developed every year. In light of these challenges, we present a framework based on semantics to enable easy co-management of neural network models and embedded devices, from discovering possible combinations and benchmarking to deploying TinyML models on microcontrollers.
 
 For more information on the project, please see our paper
-[How to Manage TinyML at Scale]()
+[How to Manage TinyML at Scale](https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale)
 
 ![Capture1.PNG](/_resources/Capture1.PNG)
 
 ## Citation
-If our work has been useful for your research and you would like to cite it in an scientific publication, please cite [How to Manage TinyML at Scale]() as follows:
+If our work has been useful for your research and you would like to cite it in an scientific publication, please cite [How to Manage TinyML at Scale](https://arxiv.org/abs/2202.09113) as follows:
 ```
-To be added
+@misc{ren2022manage,
+      title={How to Manage Tiny Machine Learning at Scale: An Industrial Perspective}, 
+      author={Haoyu Ren and Darko Anicic and Thomas Runkler},
+      year={2022},
+      eprint={2202.09113},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI}
+}
 ```
 
 ## Project Structure
@@ -37,7 +44,7 @@ Our project is runnable in a Linux environment, as the binary executable is buil
 Install the project:
 
 ```
-git clone 'to be added'
+git clone 'https://github.com/Haoyu-R/How-to-Manage-TinyML-at-Scale.git'
 ```
 
 Install the dependency:
